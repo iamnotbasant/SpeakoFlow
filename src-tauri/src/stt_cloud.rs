@@ -1182,6 +1182,7 @@ impl CloudRequest {
             CloudSttKind::OpenAiCompatible => self.transcribe_openai(audio).await,
             CloudSttKind::Deepgram => self.transcribe_deepgram(audio).await,
             CloudSttKind::AzureSpeech => self.transcribe_azure(audio).await,
+            CloudSttKind::Gemini => self.transcribe_gemini(audio).await,
         }
     }
 
@@ -1328,6 +1329,73 @@ impl CloudRequest {
         }
         let parsed: OpenAiResponse = self.parse_json(response).await?;
         Ok(parsed.text)
+    }
+
+    /// Gemini's OpenAI-compatible endpoint has no `/audio/transcriptions`
+    /// (it 404s) — audio rides inside a chat message as `input_audio`
+    /// (see ai.google.dev/gemini-api/docs/openai, "Audio understanding").
+    async fn transcribe_gemini(&self, audio: AudioUpload) -> Result<String, String> {
+        use base64::Engine as _;
+        let url = format!("{}/chat/completions", self.base_url);
+        let audio_format = match audio.format {
+            UploadFormat::Wav => "wav",
+            UploadFormat::Mp3 => "mp3",
+        };
+        let mut prompt = String::from(
+            "Transcribe this audio verbatim. Output only the transcription text, \
+             no preamble, no explanation.",
+        );
+        if let Some(language) = &self.language {
+            prompt.push_str(&format!(" The spoken language is {language}."));
+        }
+        if !self.keyterms.is_empty() {
+            prompt.push_str(&format!(
+                " Words that may appear: {}.",
+                self.keyterms.join(", ")
+            ));
+        }
+        let body = serde_json::json!({
+            "model": self.model,
+            "messages": [{
+                "role": "user",
+                "content": [
+                    { "type": "text", "text": prompt },
+                    { "type": "input_audio", "input_audio": {
+                        "data": base64::engine::general_purpose::STANDARD.encode(&audio.bytes),
+                        "format": audio_format,
+                    } },
+                ],
+            }],
+        });
+        let mut request = self.post(&url)?.json(&body);
+        if !self.api_key.is_empty() {
+            request = request.bearer_auth(&self.api_key);
+        }
+        let response = request.send().await.map_err(|e| self.network_error(e))?;
+
+        #[derive(Deserialize)]
+        struct ChatMessage {
+            #[serde(default)]
+            content: Option<String>,
+        }
+        #[derive(Deserialize)]
+        struct ChatChoice {
+            #[serde(default)]
+            message: Option<ChatMessage>,
+        }
+        #[derive(Deserialize)]
+        struct ChatCompletionsResponse {
+            #[serde(default)]
+            choices: Vec<ChatChoice>,
+        }
+        let parsed: ChatCompletionsResponse = self.parse_json(response).await?;
+        Ok(parsed
+            .choices
+            .into_iter()
+            .next()
+            .and_then(|c| c.message)
+            .and_then(|m| m.content)
+            .unwrap_or_default())
     }
 
     /// `POST /v1/listen` — raw audio body, `Authorization: Token`, options as

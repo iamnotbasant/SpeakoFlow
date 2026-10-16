@@ -423,6 +423,9 @@ pub enum CloudSttKind {
     OpenAiCompatible,
     Deepgram,
     AzureSpeech,
+    /// Gemini's OpenAI-compatible endpoint has no `/audio/transcriptions`
+    /// (it 404s) — audio is sent inside a chat message as `input_audio`.
+    Gemini,
 }
 
 /// A configurable cloud speech-to-text endpoint. Seeded from
@@ -2559,11 +2562,11 @@ pub fn default_cloud_stt_providers() -> Vec<CloudSttProvider> {
             label: "Gemini".to_string(),
             base_url: "https://generativelanguage.googleapis.com/v1beta/openai".to_string(),
             allow_base_url_edit: false,
-            kind: CloudSttKind::OpenAiCompatible,
-            default_model: "gemini-2.5-flash".to_string(),
+            kind: CloudSttKind::Gemini,
+            default_model: "gemini-3.5-transcribe".to_string(),
             models: vec![
+                "gemini-3.5-transcribe".to_string(),
                 "gemini-2.5-flash".to_string(),
-                "gemini-2.0-flash".to_string(),
             ],
             models_endpoint: Some("/models".to_string()),
             honors_keyterms: false,

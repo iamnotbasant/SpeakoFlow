@@ -108,7 +108,7 @@ pub(crate) fn supports_streaming(cfg: &ResolvedCloudStt) -> bool {
     match cfg.provider.kind {
         CloudSttKind::ElevenLabs => cfg.model.contains("realtime"),
         CloudSttKind::Deepgram => true,
-        CloudSttKind::OpenAiCompatible | CloudSttKind::AzureSpeech => false,
+        CloudSttKind::OpenAiCompatible | CloudSttKind::AzureSpeech | CloudSttKind::Gemini => false,
     }
 }
 
@@ -304,7 +304,7 @@ impl CloudStreamSession {
         let protocol = match cfg.provider.kind {
             CloudSttKind::ElevenLabs => Protocol::ElevenLabs,
             CloudSttKind::Deepgram => Protocol::Deepgram,
-            CloudSttKind::OpenAiCompatible | CloudSttKind::AzureSpeech => {
+            CloudSttKind::OpenAiCompatible | CloudSttKind::AzureSpeech | CloudSttKind::Gemini => {
                 return Err("This provider has no realtime endpoint".to_string())
             }
         };
