@@ -876,6 +876,17 @@ pub(crate) fn transcribe_cloud_blocking(
     result
 }
 
+/// Blocking entry point for the in-app Gemini self-test: runs already-encoded
+/// audio (e.g. the bundled Hinglish sample) through the Rambler-style Gemini
+/// pipeline with the caller's resolved config.
+pub(crate) fn transcribe_gemini_sample_blocking(
+    cfg: &ResolvedCloudStt,
+    audio: AudioUpload,
+) -> Result<String, String> {
+    let request = CloudRequest::from_config(cfg);
+    block_on_request(async move { request.transcribe_gemini(audio).await })
+}
+
 /// The format a request to this endpoint and model should go out in.
 ///
 /// MP3 for every hosted provider — each documents it. The custom entry stays on
@@ -1329,12 +1340,6 @@ impl CloudRequest {
         }
         let parsed: OpenAiResponse = self.parse_json(response).await?;
         Ok(parsed.text)
-    }
-
-    /// Blocking entry point for the Gemini pipeline, for callers (like the
-    /// in-app self-test) that already hold a resolved config and raw audio.
-    pub(crate) fn transcribe_gemini_blocking(&self, audio: AudioUpload) -> Result<String, String> {
-        block_on_request(self.transcribe_gemini(audio))
     }
 
     /// Rambler-style Gemini pipeline (proven working): Files API upload →

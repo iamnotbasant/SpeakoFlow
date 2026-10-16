@@ -233,9 +233,11 @@ pub async fn test_gemini_transcription(app: AppHandle) -> Result<String, String>
         bytes,
         format: crate::stt_cloud::UploadFormat::Mp3,
     };
-    let text = tauri::async_runtime::spawn_blocking(move || cfg.transcribe_gemini_blocking(audio))
-        .await
-        .map_err(|e| format!("Transcription test task failed: {e}"))??;
+    let text = tauri::async_runtime::spawn_blocking(move || {
+        crate::stt_cloud::transcribe_gemini_sample_blocking(&cfg, audio)
+    })
+    .await
+    .map_err(|e| format!("Transcription test task failed: {e}"))??;
     if text.trim().is_empty() {
         return Err("Gemini returned an empty transcript for the test audio.".to_string());
     }
