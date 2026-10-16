@@ -76,7 +76,7 @@ describe("the shipped config", () => {
 
   test("polls this repository's latest release", () => {
     expect(conf.plugins.updater.endpoints).toEqual([
-      "https://github.com/AbhishekBarali/SpeakoFlow/releases/latest/download/latest.json",
+      "https://github.com/iamnotbasant/SpeakoFlow/releases/latest/download/latest.json",
     ]);
   });
 });
