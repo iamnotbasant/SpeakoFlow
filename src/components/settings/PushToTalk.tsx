@@ -13,7 +13,7 @@ export const PushToTalk: React.FC<PushToTalkProps> = React.memo(
     const { t } = useTranslation();
     const { getSetting, updateSetting, isUpdating } = useSettings();
 
-    const holdToRecord = getSetting("push_to_talk") ?? true;
+    const holdToRecord = getSetting("push_to_talk") ?? false;
     const updating = isUpdating("push_to_talk");
     const options = [
       {

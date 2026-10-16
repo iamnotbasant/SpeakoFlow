@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Awaz",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "identifier": "com.basant.awaz",
   "build": {
     "beforeDevCommand": "bun run dev",
@@ -66,9 +66,10 @@
   },
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDczRDFGREZGODc3ODAzODEKUldTQkEzaUgvLzNSYzRMakMrcU5PNGRWOHZZTFJzZUx1dWE0Wi9kNjViRUZheWhSU2pOcnRIeVMK",
+      "active": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE3MjE1QUQyOERCMzZDNTMKUldSVGJMT04wbG9ocC9aN3plYzhvdUcvYTRNQjg1ZExkZEFVbng5RXd2OFEvb1BJa05sVUtRNWsK",
       "endpoints": [
-        "https://github.com/AbhishekBarali/SpeakoFlow/releases/latest/download/latest.json"
+        "https://github.com/iamnotbasant/SpeakoFlow/releases/latest/download/latest.json"
       ]
     }
   }

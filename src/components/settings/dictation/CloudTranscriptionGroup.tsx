@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/Button";
 import { Alert } from "@/components/ui/Alert";
 import { ModelCombo } from "@/components/ui/ModelCombo";
 import { prettyModelName } from "@/lib/utils/prettyModelName";
-import { ProviderModeToggle } from "../PostProcessingSettingsApi/ProviderModeToggle";
 import { LanguageSelector } from "../LanguageSelector";
 import { TranslateToEnglish } from "../TranslateToEnglish";
 import { useSettings } from "@/hooks/useSettings";
@@ -20,19 +19,15 @@ import { commands, type CloudSttProvider } from "@/bindings";
 import { cloudSttKeyOptional, cloudSttNeedsEndpoint } from "@/lib/cloudStt";
 
 /**
- * "Where transcription runs" — the on-device engine, or a hosted one.
+ * Cloud transcription settings: provider, API key, model, and options.
  *
- * The switch is first and everything else is behind it, because choosing cloud
- * is the decision that makes the rest of the group meaningful: a provider, a
- * key, and a model are all consequences of it. On the local side this group is a
- * single row, which is the point — the default install should not have to read
- * about an API it is not using.
- *
- * Every field here writes through a dedicated command rather than
- * `updateSetting`. That is not a style choice: `updateSetting` dispatches
- * through an allowlist in the settings store and silently does nothing (a
- * `console.warn`) for a key it has no entry for, so an optimistic-only write
- * would look like it worked and evaporate on the next refresh.
+ * Awaz is cloud-only — there is no on-device engine switch; the provider, key,
+ * and model rows always show. Every field here writes through a dedicated
+ * command rather than `updateSetting`. That is not a style choice:
+ * `updateSetting` dispatches through an allowlist in the settings store and
+ * silently does nothing (a `console.warn`) for a key it has no entry for, so
+ * an optimistic-only write would look like it worked and evaporate on the
+ * next refresh.
  *
  * Two things are surfaced deliberately rather than buried:
  *
@@ -72,10 +67,14 @@ export const CloudTranscriptionGroup: React.FC<{
   const [loadingModels, setLoadingModels] = useState(false);
   const [modelsError, setModelsError] = useState<string | null>(null);
   const [testing, setTesting] = useState(false);
+  const [geminiTesting, setGeminiTesting] = useState(false);
+  const [geminiResult, setGeminiResult] = useState<
+    { ok: true; text: string } | { ok: false; error: string } | null
+  >(null);
   const [busy, setBusy] = useState(false);
 
-  const isCloud = getSetting("stt_engine_mode") === "cloud";
-  const providerId = getSetting("cloud_stt_provider_id") ?? "elevenlabs";
+  // Awaz is cloud-only: there is no on-device engine to switch to.
+  const providerId = getSetting("cloud_stt_provider_id") ?? "gemini";
   const provider = useMemo(
     () => providers.find((entry) => entry.id === providerId),
     [providers, providerId],
@@ -183,6 +182,23 @@ export const CloudTranscriptionGroup: React.FC<{
     }
   };
 
+  const runGeminiTest = async () => {
+    setGeminiTesting(true);
+    setGeminiResult(null);
+    try {
+      const result = await commands.testGeminiTranscription();
+      if (result.status === "ok") {
+        setGeminiResult({ ok: true, text: result.data });
+      } else {
+        setGeminiResult({ ok: false, error: result.error });
+      }
+    } catch (error) {
+      setGeminiResult({ ok: false, error: String(error) });
+    } finally {
+      setGeminiTesting(false);
+    }
+  };
+
   const providerOptions = providers.map((entry) => ({
     value: entry.id,
     label: entry.label,
@@ -214,26 +230,7 @@ export const CloudTranscriptionGroup: React.FC<{
   // rather than offering a switch that would do nothing.
   const supportsTranslation = provider?.supports_translation ?? false;
 
-  const engineRow = (
-    <SettingContainer
-      title={t("settings.dictation.cloud.engine.title")}
-      description={t("settings.dictation.cloud.engine.description")}
-      info={t("settings.dictation.cloud.engine.info")}
-      grouped={true}
-    >
-      <ProviderModeToggle
-        mode={isCloud ? "cloud" : "device"}
-        disabled={busy}
-        onChange={(mode) =>
-          void commit(() =>
-            commands.setSttEngineMode(mode === "cloud" ? "cloud" : "local"),
-          )
-        }
-      />
-    </SettingContainer>
-  );
-
-  const setupRows = isCloud && showSetup && (
+  const setupRows = showSetup && (
     <>
       {!embedded && (
         <Alert variant="info" contained>
@@ -393,7 +390,7 @@ export const CloudTranscriptionGroup: React.FC<{
     </>
   );
 
-  const optionRows = isCloud && showOptions && (
+  const optionRows = showOptions && (
     <>
       {providerStreams && (
         <ToggleSwitch
@@ -456,6 +453,45 @@ export const CloudTranscriptionGroup: React.FC<{
           )}
         </Button>
       </SettingContainer>
+
+      <SettingContainer
+        title={t("settings.dictation.cloud.geminiTest.title")}
+        description={t("settings.dictation.cloud.geminiTest.description")}
+        grouped={true}
+        layout="stacked"
+      >
+        <Button
+          size="sm"
+          variant="secondary"
+          onClick={() => void runGeminiTest()}
+          disabled={geminiTesting}
+        >
+          {geminiTesting ? (
+            <span className="inline-flex items-center gap-1.5">
+              <Loader2 size={13} className="animate-spin" />
+              {t("settings.dictation.cloud.geminiTest.running")}
+            </span>
+          ) : (
+            t("settings.dictation.cloud.geminiTest.action")
+          )}
+        </Button>
+        {geminiResult && (
+          <Alert
+            variant={geminiResult.ok ? "success" : "error"}
+            contained
+            className="mt-2 w-full"
+          >
+            <p className="text-xs font-semibold">
+              {geminiResult.ok
+                ? t("settings.dictation.cloud.geminiTest.resultTitle")
+                : t("settings.dictation.cloud.geminiTest.failedTitle")}
+            </p>
+            <p className="mt-1 text-sm whitespace-pre-wrap">
+              {geminiResult.ok ? geminiResult.text : geminiResult.error}
+            </p>
+          </Alert>
+        )}
+      </SettingContainer>
     </>
   );
 
@@ -473,7 +509,6 @@ export const CloudTranscriptionGroup: React.FC<{
       title={t("settings.dictation.cloud.groupTitle")}
       icon={Cloud}
     >
-      {engineRow}
       {setupRows}
       {optionRows}
     </SettingsGroup>

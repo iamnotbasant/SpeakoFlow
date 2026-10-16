@@ -486,6 +486,12 @@
       "continue": "Continue",
       "later": "Set up later",
       "loading": "Finding your speech model"
+    },
+    "cloudSetup": {
+      "title": "Connect Gemini",
+      "body": "Awaz transcribes in the cloud with gemini-3.5-transcribe. Paste your API key once — get one free from Google AI Studio.",
+      "continue": "Continue",
+      "anytime": "You can change the key anytime in Settings."
     }
   },
   "modelSelector": {
@@ -1216,6 +1222,14 @@
           "description": "Sends one second of audio to check the key, endpoint, and model.",
           "action": "Run test",
           "running": "Testing…"
+        },
+        "geminiTest": {
+          "title": "Test Gemini transcription",
+          "description": "Transcribes the bundled Hindi sample with your saved Gemini key, through the same pipeline dictation uses.",
+          "action": "Test Gemini transcription",
+          "running": "Transcribing…",
+          "resultTitle": "Transcript",
+          "failedTitle": "Test failed"
         }
       },
       "aiCleanup": {

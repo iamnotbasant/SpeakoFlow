@@ -483,13 +483,6 @@ fn initialize_core_logic(app_handle: &AppHandle) {
             "home" => {
                 show_main_window(app);
             }
-            "open_assistant" => {
-                // Always opens (never toggles): this is the recovery path for a
-                // panel the user cannot find, and a toggle would hide it again
-                // for anyone who reached for the tray because the window was
-                // already on screen but off in a corner.
-                assistant::open_assistant_panel(app);
-            }
             "check_updates" => {
                 // Always honoured: the setting governs background checks only.
                 show_main_window(app);
@@ -1132,6 +1125,7 @@ pub fn run(cli_args: CliArgs) {
             commands::stt_cloud::get_cloud_stt_key_status,
             commands::stt_cloud::list_cloud_stt_models,
             commands::stt_cloud::test_cloud_stt,
+            commands::stt_cloud::test_gemini_transcription,
             commands::history::get_history_entries,
             commands::history::toggle_history_entry_saved,
             commands::history::get_audio_file_path,

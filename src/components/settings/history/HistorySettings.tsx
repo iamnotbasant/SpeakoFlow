@@ -289,7 +289,7 @@ export const HistorySettings: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { openSettings, navigate } = useNavigation();
   const { getSetting } = useSettings();
-  const assistantEnabled = getSetting("assistant_enabled") ?? true;
+  const assistantEnabled = getSetting("assistant_enabled") ?? false;
   const flowEnabled = getSetting("flow_enabled") ?? false;
   const osType = useOsType();
   const [entries, setEntries] = useState<HistoryEntry[]>([]);

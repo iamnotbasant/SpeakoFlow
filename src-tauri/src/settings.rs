@@ -378,22 +378,14 @@ pub enum PostProcessConfigSource {
     AssistantFallback,
 }
 
-/// Where speech-to-text runs. `Local` is the app's original behaviour and the
-/// default: a Whisper/Parakeet/GGUF model on the user's own machine. `Cloud`
-/// sends the audio to a hosted transcription API instead.
-///
-/// This is a two-way switch rather than "just another provider in the model
-/// list" because the two paths have nothing in common operationally: the local
-/// path downloads and loads weights, occupies the GPU, and needs an unload
-/// policy, while the cloud path needs a key, a network round-trip, and costs
-/// money per minute. Keeping them separate is also what lets the app skip
-/// loading a local model entirely when the user is on cloud — otherwise a
-/// multi-gigabyte Whisper model would sit in VRAM being paid for twice.
+/// Where transcription runs. Awaz is cloud-only: the local engine and its
+/// model downloads are not offered in the UI. The `Local` variant stays so
+/// older stores still parse; it is migrated to `Cloud` on load.
 #[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq, Eq, Default, Type)]
 #[serde(rename_all = "snake_case")]
 pub enum SttEngineMode {
-    #[default]
     Local,
+    #[default]
     Cloud,
 }
 
@@ -1151,11 +1143,10 @@ pub enum Theme {
 
 impl Default for Theme {
     fn default() -> Self {
-        // Open in light mode by default: the light palette is the tuned,
-        // higher-contrast "native settings" look, whereas system-dark can land
-        // on a duller read for some users. Dark and System remain one click
-        // away in Settings → General → Appearance.
-        Theme::Light
+        // Awaz opens in dark mode: the product is a small, quiet utility and
+        // the dark palette is its tuned look. Light and System remain one
+        // click away in Settings → General → Appearance.
+        Theme::Dark
     }
 }
 
@@ -2352,7 +2343,7 @@ pub const CLOUD_STT_ELEVENLABS: &str = "elevenlabs";
 pub const CLOUD_STT_AZURE: &str = "azure";
 
 pub fn default_cloud_stt_provider_id() -> String {
-    CLOUD_STT_ELEVENLABS.to_string()
+    "gemini".to_string()
 }
 
 fn default_cloud_stt_timeout_secs() -> u64 {
@@ -2553,10 +2544,12 @@ pub fn default_cloud_stt_providers() -> Vec<CloudSttProvider> {
                 "https://learn.microsoft.com/azure/ai-services/speech-service/mai-transcribe"
                     .to_string(),
         },
-        // Gemini's OpenAI-compatible transcription endpoint. Accepts the OpenAI
-        // multipart shape, so it needs no protocol of its own. `prompt` is not
-        // documented on its audio route, so honors_keyterms stays false and the
-        // app keeps its own local custom-word pass.
+        // Gemini transcription, Rambler-style: the audio is uploaded through
+        // the Files API and transcribed via POST /v1beta/interactions with
+        // `gemini-3.5-transcribe` (SMART, hi-IN + en-IN), then the upload is
+        // deleted. Gemini's OpenAI-compatible endpoint has no
+        // /audio/transcriptions (404s), so CloudSttKind::Gemini speaks this
+        // native protocol instead of the OpenAI multipart shape.
         CloudSttProvider {
             id: "gemini".to_string(),
             label: "Gemini".to_string(),
@@ -2564,11 +2557,8 @@ pub fn default_cloud_stt_providers() -> Vec<CloudSttProvider> {
             allow_base_url_edit: false,
             kind: CloudSttKind::Gemini,
             default_model: "gemini-3.5-transcribe".to_string(),
-            models: vec![
-                "gemini-3.5-transcribe".to_string(),
-                "gemini-2.5-flash".to_string(),
-            ],
-            models_endpoint: Some("/models".to_string()),
+            models: vec!["gemini-3.5-transcribe".to_string()],
+            models_endpoint: None,
             honors_keyterms: false,
             supports_streaming: false,
             // No /audio/translations route on the OpenAI-compatible endpoint.
@@ -2623,6 +2613,13 @@ fn default_cloud_stt_models() -> HashMap<String, String> {
 /// base URL the user is allowed to edit, which is theirs to keep.
 pub(crate) fn ensure_cloud_stt_defaults(settings: &mut AppSettings) -> bool {
     let mut changed = false;
+    // Awaz is cloud-only: a store that still points at the local engine (from
+    // an older build) is moved to cloud. The local backend code stays, but the
+    // UI no longer offers the switch.
+    if settings.stt_engine_mode == SttEngineMode::Local {
+        settings.stt_engine_mode = SttEngineMode::Cloud;
+        changed = true;
+    }
     for provider in default_cloud_stt_providers() {
         match settings
             .cloud_stt_providers
@@ -4040,7 +4037,7 @@ pub fn get_default_settings() -> AppSettings {
 
     AppSettings {
         bindings,
-        push_to_talk: true,
+        push_to_talk: false,
         audio_feedback: false,
         audio_feedback_volume: default_audio_feedback_volume(),
         sound_theme: default_sound_theme(),
@@ -4129,7 +4126,7 @@ pub fn get_default_settings() -> AppSettings {
         ort_accelerator: OrtAcceleratorSetting::default(),
         whisper_gpu_device: default_whisper_gpu_device(),
         extra_recording_buffer_ms: 0,
-        assistant_enabled: true,
+        assistant_enabled: false,
         assistant_provider_id: default_assistant_provider_id(),
         assistant_last_cloud_provider_id: Some(default_assistant_provider_id()),
         assistant_models: {
@@ -7024,7 +7021,7 @@ mod tests {
     fn empty_store_parses_with_defaults() {
         let settings: AppSettings = serde_json::from_value(serde_json::json!({}))
             .expect("all AppSettings fields need serde defaults (container serde(default))");
-        assert!(settings.push_to_talk);
+        assert!(!settings.push_to_talk);
         assert!(!settings.audio_feedback);
     }
 

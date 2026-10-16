@@ -30,13 +30,13 @@ use tauri_plugin_opener::OpenerExt;
 
 /// Must match `plugins.updater.endpoints[0]` in tauri.conf.json (tested).
 pub const UPDATE_MANIFEST_URL: &str =
-    "https://github.com/AbhishekBarali/SpeakoFlow/releases/latest/download/latest.json";
+    "https://github.com/iamnotbasant/SpeakoFlow/releases/latest/download/latest.json";
 
 /// The only place a downloaded installer may come from.
 const RELEASE_DOWNLOAD_PREFIX: &str =
-    "https://github.com/AbhishekBarali/SpeakoFlow/releases/download/";
+    "https://github.com/iamnotbasant/SpeakoFlow/releases/download/";
 
-pub const RELEASES_PAGE_URL: &str = "https://github.com/AbhishekBarali/SpeakoFlow/releases/latest";
+pub const RELEASES_PAGE_URL: &str = "https://github.com/iamnotbasant/SpeakoFlow/releases/latest";
 
 /// Event carrying installer-download progress to the webview.
 pub const INSTALLER_PROGRESS_EVENT: &str = "update-installer-progress";
@@ -235,8 +235,11 @@ pub fn installer_file_name(last_segment: &str) -> Option<String> {
     let known = [".exe", ".msi", ".dmg", ".AppImage", ".deb", ".rpm"]
         .iter()
         .any(|ext| name.ends_with(ext));
-    (allowed && known && name.starts_with("SpeakoFlow") && !name.contains(".."))
-        .then(|| name.to_string())
+    (allowed
+        && known
+        && (name.starts_with("Awaz") || name.starts_with("SpeakoFlow"))
+        && !name.contains(".."))
+    .then(|| name.to_string())
 }
 
 fn percent_decode(value: &str) -> Option<String> {

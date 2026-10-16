@@ -10,10 +10,8 @@ import {
   ExternalLink,
   FolderOpen,
   Github,
-  MessageCircle,
   MessageSquareText,
   Mic,
-  PhoneCall,
   Scale,
   SunMoon,
   Type as TypeIcon,
@@ -135,9 +133,8 @@ export const ShortcutsTab: React.FC = () => {
   const isLinux = type() === "linux";
   const cleanupEnabled = getSetting("post_process_enabled") ?? false;
   const cleanupOnDictation = getSetting("post_process_on_dictation") ?? false;
-  const assistantEnabled = getSetting("assistant_enabled") ?? true;
 
-  const goTo = (page: "cleanup" | "assistant") => {
+  const goTo = (page: "cleanup") => {
     closeSettings();
     navigate(page);
   };
@@ -187,32 +184,6 @@ export const ShortcutsTab: React.FC = () => {
           />
         )}
         <PushToTalk descriptionMode="inline" grouped={true} />
-      </SettingsGroup>
-
-      <SettingsGroup title={t("settingsDialog.shortcuts.assistant")}>
-        {assistantEnabled ? (
-          <>
-            <ShortcutInput
-              shortcutId="assistant"
-              grouped={true}
-              icon={MessageCircle}
-              tone="sky"
-            />
-            <ShortcutInput
-              shortcutId="assistant_call"
-              grouped={true}
-              icon={PhoneCall}
-              tone="indigo"
-            />
-          </>
-        ) : (
-          <UnavailableShortcut
-            title={t("settings.general.shortcut.bindings.assistant.name")}
-            hint={t("settingsDialog.shortcuts.assistantOff")}
-            action={t("settingsDialog.shortcuts.openAssistant")}
-            onAction={() => goTo("assistant")}
-          />
-        )}
       </SettingsGroup>
     </>
   );
@@ -361,7 +332,7 @@ export const AdvancedTab: React.FC = () => {
   );
 };
 
-const REPO_URL = "https://github.com/AbhishekBarali/SpeakoFlow";
+const REPO_URL = "https://github.com/iamnotbasant/SpeakoFlow";
 
 export const AboutTab: React.FC = () => {
   const { t } = useTranslation();

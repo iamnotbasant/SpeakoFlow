@@ -23,7 +23,7 @@ import {
   type SceneId,
 } from "./tourScenes";
 
-const ORDER: SceneId[] = ["dictate", "ask", "call"];
+const ORDER: SceneId[] = ["dictate"];
 const ICONS = { dictate: Mic, ask: MessageCircle, call: PhoneCall } as const;
 const BINDING: Record<SceneId, string> = {
   dictate: "transcribe",
@@ -65,10 +65,9 @@ const Steps: React.FC<{
 );
 
 /**
- * Three things you can do, each shown with the surface you will actually see,
- * and beside it the steps to do it. This is the last screen of first-run
- * setup: Continue opens the app, while the speech model chosen in setup keeps
- * downloading (the sidebar shows its progress).
+ * What you can do, shown with the surface you will actually see, and beside
+ * it the steps to do it. This is the last screen of first-run setup: Continue
+ * opens the app.
  * It only shows: nothing here downloads or switches anything on.
  */
 export const TourStep: React.FC<{
@@ -82,7 +81,7 @@ export const TourStep: React.FC<{
     Math.min(Math.max(0, initialIndex), ORDER.length - 1),
   );
   const scene = ORDER[index];
-  const holdToTalk = settings?.push_to_talk ?? true;
+  const holdToTalk = settings?.push_to_talk ?? false;
   const binding = settings?.bindings?.[BINDING[scene]]?.current_binding;
   const compactOverlay = settings?.overlay_style === "minimal";
   const hint =
@@ -144,7 +143,7 @@ export const TourStep: React.FC<{
       step="tour"
       width="wide"
       footer={
-        // No skip: the tour is three scenes, shown once per install, and
+        // No skip: the tour is one scene, shown once per install, and
         // Next is the only way through. The buttons stay on the trailing edge.
         <>
           <div className="ms-auto flex items-center gap-3">

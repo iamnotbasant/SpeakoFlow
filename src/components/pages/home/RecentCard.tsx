@@ -68,7 +68,7 @@ const TryItBox: React.FC = () => {
   const { t } = useTranslation();
   const { getSetting } = useSettings();
   const binding = getSetting("bindings")?.transcribe?.current_binding;
-  const holdToTalk = getSetting("push_to_talk") ?? true;
+  const holdToTalk = getSetting("push_to_talk") ?? false;
   const fieldId = "home-try-dictation";
 
   return (

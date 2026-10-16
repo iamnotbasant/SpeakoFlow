@@ -468,8 +468,8 @@ impl UploadFormat {
 /// One encoded recording, ready to attach to a request.
 #[derive(Clone)]
 pub(crate) struct AudioUpload {
-    bytes: Vec<u8>,
-    format: UploadFormat,
+    pub(crate) bytes: Vec<u8>,
+    pub(crate) format: UploadFormat,
 }
 
 /// Encode a recording for upload in `format`.
@@ -1331,6 +1331,12 @@ impl CloudRequest {
         Ok(parsed.text)
     }
 
+    /// Blocking entry point for the Gemini pipeline, for callers (like the
+    /// in-app self-test) that already hold a resolved config and raw audio.
+    pub(crate) fn transcribe_gemini_blocking(&self, audio: AudioUpload) -> Result<String, String> {
+        block_on_request(self.transcribe_gemini(audio))
+    }
+
     /// Rambler-style Gemini pipeline (proven working): Files API upload →
     /// `POST /v1beta/interactions` with `gemini-3.5-transcribe`
     /// (SMART mode, hi-IN + en-IN) → delete the uploaded file.
@@ -1421,7 +1427,7 @@ impl CloudRequest {
                     let _ = self.delete_gemini_file(API_BASE, &key, &file_name).await;
                     return Err("Audio process nahi ho paya (FAILED).".to_string());
                 }
-                _ => std::thread::sleep(Duration::from_secs(2)),
+                _ => std::thread::sleep(Duration::from_secs(1)),
             }
         }
         if !active {

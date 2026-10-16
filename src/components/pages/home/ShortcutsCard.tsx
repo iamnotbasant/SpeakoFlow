@@ -31,13 +31,12 @@ export const ShortcutsCard: React.FC = () => {
   const { getSetting, updateSetting, isUpdating } = useSettings();
   const { navigate } = useNavigation();
   const os = useOsType();
-  const holdToTalk = getSetting("push_to_talk") ?? true;
+  const holdToTalk = getSetting("push_to_talk") ?? false;
   const cleanupOn = getSetting("post_process_enabled") ?? false;
   // Cleanup that rides on the dictation shortcut has no keys of its own, so
   // the dictation row says "Dictate and clean up" instead of listing both.
   const cleanupOnDictation =
     cleanupOn && (getSetting("post_process_on_dictation") ?? false);
-  const assistantOn = getSetting("assistant_enabled") ?? true;
 
   const rows: ShortcutRow[] = [
     {
@@ -61,18 +60,6 @@ export const ShortcutsCard: React.FC = () => {
             off: cleanupOn ? undefined : ("cleanup" as PageId),
           },
         ]),
-    {
-      id: "assistant",
-      title: t("home.shortcuts.ask.title"),
-      info: t("home.shortcuts.ask.what"),
-      off: assistantOn ? undefined : "assistant",
-    },
-    {
-      id: "assistant_call",
-      title: t("home.shortcuts.call.title"),
-      info: t("home.shortcuts.call.what"),
-      off: assistantOn ? undefined : "assistant",
-    },
   ];
   // Cancel is not a global shortcut on Linux (see the Settings dialog).
   if (os !== "linux") {

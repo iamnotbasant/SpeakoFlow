@@ -89,7 +89,7 @@ export const summarizeStt = (
   t: TFunction,
 ): SlotSummary => {
   if (settings?.stt_engine_mode === "cloud") {
-    const id = settings.cloud_stt_provider_id ?? "elevenlabs";
+    const id = settings.cloud_stt_provider_id ?? "gemini";
     const provider = cloudProviders.find((entry) => entry.id === id);
     const model =
       settings.cloud_stt_models?.[id]?.trim() || provider?.default_model || "";

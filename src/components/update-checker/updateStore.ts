@@ -68,7 +68,7 @@ interface UpdateState {
 }
 
 const DEFAULT_RELEASE_PAGE =
-  "https://github.com/AbhishekBarali/SpeakoFlow/releases/latest";
+  "https://github.com/iamnotbasant/SpeakoFlow/releases/latest";
 
 /** The plugin's handle for the found update. Not serialisable, so not in state. */
 let pending: Update | null = null;

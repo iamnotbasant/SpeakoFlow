@@ -47,7 +47,6 @@ interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   { id: "home", labelKey: "nav.home", icon: House },
   { id: "history", labelKey: "nav.history", icon: History },
-  { id: "assistant", labelKey: "nav.assistant", icon: MessageCircle },
   { id: "meetings", labelKey: "nav.meetings", icon: Users },
   { id: "cleanup", labelKey: "nav.cleanup", icon: Wand2 },
   { id: "dictionary", labelKey: "nav.dictionary", icon: BookA },

@@ -36,12 +36,8 @@ export type PageId =
 /** The four jobs a model does in SpeakoFlow — one tab each on Models. */
 export type ModelSlot = "stt" | "cleanup" | "assistant" | "voice";
 
-export const MODEL_SLOTS: ModelSlot[] = [
-  "stt",
-  "cleanup",
-  "assistant",
-  "voice",
-];
+/** The tabs Awaz actually shows: the assistant and voice jobs are removed. */
+export const MODEL_SLOTS: ModelSlot[] = ["stt", "cleanup"];
 
 export type SettingsTab =
   | "general"

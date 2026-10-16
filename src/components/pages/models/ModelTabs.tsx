@@ -1,27 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { commands } from "@/bindings";
 import { useSettings } from "@/hooks/useSettings";
-import { useModelStore } from "@/stores/modelStore";
-import { getModelCategory } from "@/lib/utils/modelCategory";
-import { getTranslatedModelName } from "@/lib/utils/modelTranslation";
 import { SettingsGroup } from "@/components/ui/SettingsGroup";
-import { SettingContainer } from "@/components/ui/SettingContainer";
-import { LogoSelect } from "@/components/ui/LogoSelect";
 import { Button } from "@/components/ui/Button";
 import { InfoTip } from "@/components/ui/InfoTip";
-import { ProviderModeToggle } from "@/components/settings/PostProcessingSettingsApi/ProviderModeToggle";
 import { CloudTranscriptionGroup } from "@/components/settings/dictation/CloudTranscriptionGroup";
-import { LanguageSelector } from "@/components/settings/LanguageSelector";
-import { TranslateToEnglish } from "@/components/settings/TranslateToEnglish";
-import { ModelsSettings } from "@/components/settings/models/ModelsSettings";
 import { LlmCatalog } from "@/components/settings/assistant/LlmCatalog";
 import { PostProcessingSettingsApi } from "@/components/settings/post-processing/PostProcessingSettings";
 import { PostProcessTimeout } from "@/components/settings/PostProcessTimeout";
 import { ThinkingLevelSetting } from "@/components/settings/ThinkingLevelSetting";
 import { PostProcessUnloadTimeout } from "@/components/settings/PostProcessUnloadTimeout";
 import { AssistantSettings } from "@/components/settings/assistant/AssistantSettings";
-import { ModelMark } from "@/components/shell/SlotVisuals";
 import { useNavigation, type ModelSlot } from "@/components/shell/navigation";
 import { useModelSlots } from "@/components/shell/useModelSlots";
 
@@ -63,103 +52,16 @@ const CatalogHeading: React.FC<{ title: string; info?: string }> = ({
 
 /* ─────────────────────────── speech to text ─────────────────────────── */
 
-const DeviceSttRows: React.FC<{ onBrowse: () => void }> = ({ onBrowse }) => {
-  const { t } = useTranslation();
-  const models = useModelStore((state) => state.models);
-  const currentModel = useModelStore((state) => state.currentModel);
-  const selectModel = useModelStore((state) => state.selectModel);
-  const [busy, setBusy] = useState(false);
-  const downloaded = models.filter(
-    (model) => getModelCategory(model) === "stt" && model.is_downloaded,
-  );
-  const current = models.find((model) => model.id === currentModel);
-
-  return (
-    <>
-      <SettingContainer
-        title={t("settings.postProcessing.api.model.title")}
-        grouped={true}
-      >
-        <LogoSelect
-          options={downloaded.map((model) => ({
-            value: model.id,
-            label: getTranslatedModelName(model, t),
-            icon: <ModelMark model={model} size="sm" />,
-          }))}
-          value={current?.is_downloaded ? currentModel : null}
-          onChange={(id) => {
-            setBusy(true);
-            void selectModel(id).finally(() => setBusy(false));
-          }}
-          placeholder={t("pickers.choose")}
-          disabled={busy}
-          className="w-[20rem]"
-          ariaLabel={t("pickers.label.stt")}
-          footerAction={{ label: t("pickers.download"), onClick: onBrowse }}
-        />
-      </SettingContainer>
-      {current?.supports_language_selection && (
-        <LanguageSelector
-          grouped={true}
-          supportedLanguages={current.supported_languages}
-        />
-      )}
-      {current?.supports_translation && <TranslateToEnglish grouped={true} />}
-    </>
-  );
-};
-
 export const SpeechTab: React.FC = () => {
   const { t } = useTranslation();
-  const { settings, refreshSettings } = useSettings();
-  const [busy, setBusy] = useState(false);
-  const catalogRef = useRef<HTMLElement>(null);
-  const isCloud = settings?.stt_engine_mode === "cloud";
-
-  const setMode = async (mode: "device" | "cloud") => {
-    setBusy(true);
-    try {
-      await commands.setSttEngineMode(mode === "cloud" ? "cloud" : "local");
-      await refreshSettings();
-    } finally {
-      setBusy(false);
-    }
-  };
 
   return (
     <div className="space-y-9">
-      <SettingsGroup>
-        <SettingContainer
-          title={t("models.runsOn")}
-          description={t("modelsHub.slots.stt.whereHint")}
-          grouped={true}
-        >
-          <ProviderModeToggle
-            mode={isCloud ? "cloud" : "device"}
-            onChange={(mode) => void setMode(mode)}
-            disabled={busy}
-          />
-        </SettingContainer>
-        {isCloud ? (
-          <CloudTranscriptionGroup embedded section="setup" />
-        ) : (
-          <DeviceSttRows onBrowse={() => scrollIntoView(catalogRef.current)} />
-        )}
-      </SettingsGroup>
+      <CloudTranscriptionGroup embedded section="setup" />
 
-      {isCloud ? (
-        <SettingsGroup title={t("models.options")}>
-          <CloudTranscriptionGroup embedded section="options" />
-        </SettingsGroup>
-      ) : (
-        <section ref={catalogRef} className="scroll-mt-6">
-          <CatalogHeading
-            title={t("models.downloadTitle")}
-            info={t("modelsHub.slots.stt.catalogDescription")}
-          />
-          <ModelsSettings lockedCategory="stt" />
-        </section>
-      )}
+      <SettingsGroup title={t("models.options")}>
+        <CloudTranscriptionGroup embedded section="options" />
+      </SettingsGroup>
     </div>
   );
 };
@@ -234,7 +136,7 @@ export const AssistantTab: React.FC = () => {
   const { getSetting } = useSettings();
   const { navigate } = useNavigation();
   const catalogRef = useRef<HTMLElement>(null);
-  const assistantEnabled = getSetting("assistant_enabled") ?? true;
+  const assistantEnabled = getSetting("assistant_enabled") ?? false;
   const isDevice = (getSetting("assistant_provider_id") ?? "") === "builtin";
 
   return (
