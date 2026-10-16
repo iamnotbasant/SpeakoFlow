@@ -20,12 +20,12 @@ const conf = JSON.parse(
 ) as { plugins: { updater: { pubkey: string; endpoints: string[] } } };
 const PUBKEY = conf.plugins.updater.pubkey;
 
-// Produced once with `tauri signer sign` and the real SpeakoFlow updater key
-// over the 16 bytes "hello speakoflow". A known-good vector ties the verifier
+// Produced once with `tauri signer sign` and the real Awaz updater key
+// over the 9 bytes "hello awaz". A known-good vector ties the verifier
 // to the exact format the Tauri CLI writes, not to our reading of the spec.
-const PAYLOAD = new TextEncoder().encode("hello speakoflow");
+const PAYLOAD = new TextEncoder().encode("hello awaz");
 const SIGNATURE =
-  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTQkEzaUgvLzNSYzJ0dVM1emFGdGtKaGEzUVpHRU9YY253VWtmR0dyUUtQUFc2eDhsQzZCRGs1czVvTXY3NnAxdlVVeTdVSUZDd3BzbldpM2RLYkhLbHVwQzlZRVJVdEF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNTkxMjU5CWZpbGU6c2Ytc2lnbi10ZXN0LmJpbgpnQlRzTm9HZGtFcjVvNEVKay9WUlJKVWpVSUxBSktZRklQMGRzeDJwSUhlWEFydUNGODJzRlVpYVkyNDYvT3BlcTQ1SEU0R0R3eUFpZ2RHMTJmbDNBQT09Cg==";
+  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSVGJMT04wbG9ocDZiR3phQ3M4ejFPYVdkK2xURzIzd1o5VzJkVUlkanZUcHllV3ByMTBnTnRSWkxPdGQrSWRVc0dJdkdNdDdKaFNNQmI5UlVDZmdIVU1aMVNYKzRVSndjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMTcxNTA3CWZpbGU6YXdhei1zaWduLXRlc3QuYmluCnBxa0F6Z0xMbjFROXZxbW5pZmtmc3FHRnU3cHFxcm5UZWE0eUFUQnFMWWZSOGlSb0lMZ3VwMTRkVnNKemsvTTRPNHNDMFJ2NkIwb291UEt5by9CRURnPT0K";
 
 // Upstream Handy's key, which this app shipped with until 2.0.0 and whose
 // private half we never had.
@@ -33,7 +33,7 @@ const HANDY_PUBKEY =
   "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEJBQjcyMDk1MjA2NjAxRjkKUldUNUFXWWdsU0MzdXRRZi8zYzhqV2FaNUVDbDd2Rk5VM1IvWWowVXdmRFNKQ1BrMXF5RFFsLy8K";
 
 describe("verifyUpdaterSignature", () => {
-  test("accepts a signature made by the SpeakoFlow key", () => {
+  test("accepts a signature made by the Awaz key", () => {
     expect(verifyUpdaterSignature(PAYLOAD, SIGNATURE, PUBKEY)).toEqual({
       ok: true,
     });
@@ -55,7 +55,7 @@ describe("verifyUpdaterSignature", () => {
   test("rejects an edited trusted comment", () => {
     const text = Buffer.from(SIGNATURE, "base64")
       .toString("utf8")
-      .replace("timestamp:1790591259", "timestamp:1790591260");
+      .replace("timestamp:1792171507", "timestamp:1792171508");
     const forged = Buffer.from(text, "utf8").toString("base64");
     const result = verifyUpdaterSignature(PAYLOAD, forged, PUBKEY);
     expect(result.ok).toBe(false);
