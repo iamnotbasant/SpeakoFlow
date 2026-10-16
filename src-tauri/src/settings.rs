@@ -2680,6 +2680,21 @@ pub(crate) fn ensure_cloud_stt_defaults(settings: &mut AppSettings) -> bool {
         changed = true;
     }
 
+    // Awaz is Gemini-first: an install that still points at the old elevenlabs
+    // default (from a build before gemini became the default) is moved to
+    // gemini — but only if the user never actually set up elevenlabs (no key
+    // saved). A real elevenlabs user keeps their choice.
+    if settings.cloud_stt_provider_id == CLOUD_STT_ELEVENLABS
+        && settings
+            .cloud_stt_api_keys
+            .get(CLOUD_STT_ELEVENLABS)
+            .map(|k| k.trim().is_empty())
+            .unwrap_or(true)
+    {
+        settings.cloud_stt_provider_id = default_cloud_stt_provider_id();
+        changed = true;
+    }
+
     // Reorder to match the shipped registry. Without this a provider added in a
     // later version is simply appended, so an upgraded install shows it *after*
     // "Custom" while a fresh install shows it before — the same list in two
