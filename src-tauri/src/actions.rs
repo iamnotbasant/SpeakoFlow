@@ -3104,8 +3104,14 @@ async fn deliver_transcription(d: Dictation, transcription: String) {
     }
 
     // Rerouted to the assistant (the overlay's Ask-Assistant button): hand the
-    // transcript to the assistant instead of pasting it anywhere.
-    if d.fresh && crate::assistant::take_transcribe_redirect() {
+    // transcript to the assistant instead of pasting it anywhere. Awaz ships
+    // with the assistant removed, so this path is dead — but if the flag ever
+    // got set while the assistant is off, the transcript must be pasted, not
+    // fed to a chatbot.
+    if d.fresh
+        && crate::settings::get_settings(&ah).assistant_enabled
+        && crate::assistant::take_transcribe_redirect()
+    {
         utils::hide_recording_overlay(&ah);
         change_tray_icon(&ah, TrayIconState::Idle);
         // Same rule as the assistant shortcut: this is a quick ask, so it

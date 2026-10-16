@@ -3463,6 +3463,15 @@ fn retire_memory_incognito(settings: &mut AppSettings) -> bool {
 
 fn ensure_assistant_defaults(settings: &mut AppSettings) -> bool {
     let mut changed = retire_memory_incognito(settings);
+    // Awaz has no assistant: force it off for every install, including stores
+    // carried over from builds where it defaulted on. The UI is gone, but
+    // without this an upgrader keeps the backend live — and a live assistant
+    // is the one thing in this app that answers speech with generated text
+    // instead of a transcript.
+    if settings.assistant_enabled {
+        settings.assistant_enabled = false;
+        changed = true;
+    }
     for provider in default_post_process_providers() {
         if !settings.assistant_models.contains_key(&provider.id) {
             settings
