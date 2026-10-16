@@ -35,10 +35,10 @@
     "downloading": "Stahování… {{progress}} %",
     "downloadingUnknown": "Stahování…",
     "installing": "Instalace…",
-    "reopening": "SpeakoFlow se zavře, nainstaluje aktualizaci a za několik sekund se znovu otevře.",
+    "reopening": "Awaz se zavře, nainstaluje aktualizaci a za několik sekund se znovu otevře.",
     "updatedTo": "Aktualizováno na verzi {{version}}",
     "restart": "Restartovat",
-    "readyToRestart": "Aktualizace je nainstalovaná. Restartujte SpeakoFlow, abyste ji mohli začít používat.",
+    "readyToRestart": "Aktualizace je nainstalovaná. Restartujte Awaz, abyste ji mohli začít používat.",
     "installFailed": "Aktualizace se nenainstalovala. Můžete to zkusit znovu, nebo si stáhnout instalační program a spustit ho sami.",
     "downloadFailed": "Stahování se nedokončilo. Zkontrolujte připojení a zkuste to znovu.",
     "downloadInstaller": "Stáhnout instalační program",
@@ -49,13 +49,13 @@
     "showInFolder": "Zobrazit ve složce",
     "viewRelease": "Zobrazit na GitHubu",
     "hint": {
-      "windows": "SpeakoFlow se zavře, nainstaluje aktualizaci a znovu se otevře. Nic dalšího nemusíte klikat.",
-      "macos": "SpeakoFlow se restartuje v nové verzi. macOS vás pak možná znovu požádá o povolení mikrofonu a zpřístupnění.",
-      "linux": "SpeakoFlow se restartuje v nové verzi. Instalace z balíčku .deb si nejdřív vyžádá vaše heslo."
+      "windows": "Awaz se zavře, nainstaluje aktualizaci a znovu se otevře. Nic dalšího nemusíte klikat.",
+      "macos": "Awaz se restartuje v nové verzi. macOS vás pak možná znovu požádá o povolení mikrofonu a zpřístupnění.",
+      "linux": "Awaz se restartuje v nové verzi. Instalace z balíčku .deb si nejdřív vyžádá vaše heslo."
     },
     "modes": {
       "portable": "Toto je přenosná verze, která se nedokáže sama nahradit. Stáhněte novou verzi a zkopírujte do ní svou složku Data.",
-      "packageManager": "SpeakoFlow nainstaloval váš správce balíčků, takže ho aktualizujte tam, například příkazem yay -Syu speakoflow-bin.",
+      "packageManager": "Awaz nainstaloval váš správce balíčků, takže ho aktualizujte tam, například příkazem yay -Syu speakoflow-bin.",
       "download": "Tato kopie se nedokáže aktualizovat na místě. Stáhněte instalační program a spusťte ho, abyste získali novou verzi."
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "Poslat zpětnou vazbu",
     "title": "Poslat zpětnou vazbu",
-    "description": "Každou zprávu čtu osobně, takže pište, jak vám to přijde pod ruku. Děkuji, že pomáháte SpeakoFlow vylepšovat.",
+    "description": "Každou zprávu čtu osobně, takže pište, jak vám to přijde pod ruku. Děkuji, že pomáháte Awaz vylepšovat.",
     "kind": {
       "label": "Druh zpětné vazby",
       "bug": "Chyba",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "Co se stalo a co jste místo toho očekávali?",
-      "idea": "Co by vám SpeakoFlow vylepšilo?",
+      "idea": "Co by vám Awaz vylepšilo?",
       "question": "Co byste chtěli vědět?"
     },
     "messageLabel": "Zpráva",
@@ -161,10 +161,10 @@
       "retry": "Zkusit znovu"
     },
     "tour": {
-      "features": "Co SpeakoFlow umí",
+      "features": "Co Awaz umí",
       "count": "{{current}} z {{total}}",
       "next": "Další",
-      "finish": "Otevřít SpeakoFlow",
+      "finish": "Otevřít Awaz",
       "tabs": {
         "dictate": "Diktování",
         "ask": "Asistent",
@@ -242,7 +242,7 @@
       "ready": "Připraveno"
     },
     "speechToText": {
-      "title": "Jak vás má SpeakoFlow slyšet?",
+      "title": "Jak vás má Awaz slyšet?",
       "subtitle": "Tohle převádí váš hlas na text, přímo na vašem počítači. Vyberte si jeden, kdykoli jej můžete změnit.",
       "cards": {
         "fast": {
@@ -287,7 +287,7 @@
       "downloadStarted": "Váš model se stahuje na pozadí."
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "Použije vyslovené úpravy jako “new paragraph” nebo “scratch that”. Pouze v angličtině.",
       "pill": "Vyčistí vaše diktování",
       "recommendedForDictation": "Doporučeno pro diktování",
@@ -307,7 +307,7 @@
       "downloadingVoice": "Váš hlasový model přistává. Hotovo {{percentage}}%.",
       "downloadingGeneric": "Stále se stahuje. Hotovo {{percentage}}%.",
       "signOff": "A to je vše. Jděte něco říct.",
-      "openApp": "Otevřít SpeakoFlow"
+      "openApp": "Otevřít Awaz"
     },
     "errors": {
       "selectModel": "Tento model se nepodařilo vybrat. Zkuste to prosím znovu.",
@@ -439,7 +439,7 @@
     },
     "permissions": {
       "title": "Vyžadována oprávnění",
-      "description": "SpeakoFlow potřebuje několik oprávnění pro správné fungování.",
+      "description": "Awaz potřebuje několik oprávnění pro správné fungování.",
       "microphone": {
         "title": "Přístup k mikrofonu",
         "description": "Potřebný pro zachycení vašeho hlasu k přepisu."
@@ -449,7 +449,7 @@
         "description": "Potřebný pro psaní přepsaného textu do vašich aplikací.",
         "stuckHint": "Už je zapnuto v Nastavení systému? Po aktualizaci si macOS může ponechat oprávnění, které už této verzi neodpovídá.",
         "reset": "Obnovit oprávnění",
-        "resetDone": "Teď v Nastavení systému znovu zapněte SpeakoFlow."
+        "resetDone": "Teď v Nastavení systému znovu zapněte Awaz."
       },
       "grant": "Udělit oprávnění",
       "granted": "Uděleno",
@@ -458,7 +458,7 @@
       "errors": {
         "checkFailed": "Nepodařilo se zkontrolovat oprávnění. Zkuste to prosím znovu.",
         "requestFailed": "Nepodařilo se požádat o oprávnění. Zkuste to prosím znovu.",
-        "resetFailed": "Oprávnění se nepodařilo obnovit. Odeberte SpeakoFlow ze seznamu Zpřístupnění a přidejte ho znovu."
+        "resetFailed": "Oprávnění se nepodařilo obnovit. Odeberte Awaz ze seznamu Zpřístupnění a přidejte ho znovu."
       }
     },
     "frame": {
@@ -764,7 +764,7 @@
         "rescanDone_few": "Nalezeny {{count}} místní modely.",
         "rescanDone_many": "Nalezeno {{count}} místního modelu.",
         "rescanDone_other": "Nalezeno {{count}} místních modelů.",
-        "footnote": "Připojené složky se znovu prohledají při spuštění SpeakoFlow, takže modely, které do nich přidáte později, se objeví samy. Odpojení složky nebo odebrání modelu ho odstraní jen z tohoto seznamu — vaše soubory zůstanou tam, kde jsou.",
+        "footnote": "Připojené složky se znovu prohledají při spuštění Awaz, takže modely, které do nich přidáte později, se objeví samy. Odpojení složky nebo odebrání modelu ho odstraní jen z tohoto seznamu — vaše soubory zůstanou tam, kde jsou.",
         "removeTitle": "Odebrat ze seznamu?",
         "removeConfirm": "Odebrat „{{modelName}}“ ze seznamu modelů?\n\nSamotný soubor zůstane tam, kde je:\n{{path}}",
         "missingBadge": "Soubor chybí",
@@ -865,15 +865,15 @@
       },
       "autostart": {
         "label": "Spouštět při startu",
-        "description": "Automaticky otevřít SpeakoFlow po přihlášení."
+        "description": "Automaticky otevřít Awaz po přihlášení."
       },
       "showTrayIcon": {
         "label": "Zobrazit ikonu v systémové liště",
-        "description": "Ponechat SpeakoFlow v systémové liště."
+        "description": "Ponechat Awaz v systémové liště."
       },
       "closeBehavior": {
         "label": "Ukončit aplikaci při zavření okna",
-        "description": "Když je vypnuto, zavřením okna zůstane SpeakoFlow běžet v systémové liště a vaše zkratky dál fungují. Když je zapnuto, zavřením okna se aplikace úplně ukončí."
+        "description": "Když je vypnuto, zavřením okna zůstane Awaz běžet v systémové liště a vaše zkratky dál fungují. Když je zapnuto, zavřením okna se aplikace úplně ukončí."
       },
       "overlayStyle": {
         "title": "Překryv",
@@ -967,8 +967,8 @@
       },
       "customWords": {
         "title": "Vlastní slova",
-        "description": "Jména, produkty a fráze, které má SpeakoFlow psát po vašem.",
-        "info": "Příklad: přidejte „Kokoro“, pokud SpeakoFlow napíše „Coco row“.",
+        "description": "Jména, produkty a fráze, které má Awaz psát po vašem.",
+        "info": "Příklad: přidejte „Kokoro“, pokud Awaz napíše „Coco row“.",
         "placeholder": "Přidejte jméno, termín nebo krátkou frázi",
         "add": "Přidat",
         "empty": "Zatím žádná vlastní slova.",
@@ -977,7 +977,7 @@
       },
       "autoLearn": {
         "label": "Učit se slova, která opravím",
-        "description": "Zapamatuje si váš pravopis, když opravíte slovo, které SpeakoFlow napsal špatně.",
+        "description": "Zapamatuje si váš pravopis, když opravíte slovo, které Awaz napsal špatně.",
         "info": "Čte jen pole, do kterého právě psal, a to asi minutu. Nic se nenahrává a každé slovo, které se naučí, je uvedené tady.",
         "unsupported": "Učení z oprav je zatím dostupné jen ve Windows. Slova můžete dál přidávat ručně výše.",
         "learnedTitle": "Naučeno z vašich oprav",
@@ -991,7 +991,7 @@
         "title": "Náhrady textu",
         "description": "Nahraďte v přepisu určitou frázi textem, který používáte často. Příklad: z „můj e-mail“ se stane „alex@example.com“.",
         "rulesTitle": "Pravidla náhrad",
-        "rulesHint": "Určete, co SpeakoFlow slyší a co má vložit.",
+        "rulesHint": "Určete, co Awaz slyší a co má vložit.",
         "empty": "Vytvořte pravidlo pro frázi, kterou často říkáte.",
         "addFirst": "Vytvořit první pravidlo",
         "addRule": "Přidat náhradu",
@@ -1239,7 +1239,7 @@
         },
         "model": {
           "emptyTitle": "Zatím žádný model pro čištění",
-          "emptyDescription": "SpeakoFlow Mini je malé stažení vytvořené právě pro tohle.",
+          "emptyDescription": "Awaz Mini je malé stažení vytvořené právě pro tohle.",
           "choose": "Vybrat model",
           "tunedBadge": "Vyladěn na čištění"
         },
@@ -1247,7 +1247,7 @@
           "title": "Vyberte si model pro čištění",
           "description": "Čištění se spustí po každém diktování, takže rychlost je důležitější než velikost. Vše běží offline.",
           "recommendedTitle": "Doporučeno pro čištění",
-          "recommendedDescription": "SpeakoFlow Mini je vytrénovaný právě na tuhle jednu úlohu a zvládá ji lépe než mnohem větší modely."
+          "recommendedDescription": "Awaz Mini je vytrénovaný právě na tuhle jednu úlohu a zvládá ji lépe než mnohem větší modely."
         },
         "promptGroupTitle": "Instrukce pro čištění",
         "tunedModelNotice": "Tento model je doladěný na čištění anglického diktování, takže funguje nejlépe s doporučeným promptem a bez stylu.",
@@ -1353,7 +1353,7 @@
       },
       "updateChecks": {
         "label": "Automaticky kontrolovat aktualizace",
-        "description": "Hledá novou verzi při spuštění SpeakoFlow a každých 12 hodin. Ručně můžete zkontrolovat kdykoli."
+        "description": "Hledá novou verzi při spuštění Awaz a každých 12 hodin. Ručně můžete zkontrolovat kdykoli."
       },
       "soundTheme": {
         "label": "Zvukový motiv",
@@ -1451,7 +1451,7 @@
       },
       "appDataDirectory": {
         "title": "Složka dat aplikace",
-        "description": "Kam SpeakoFlow ukládá vaše modely, historii a nastavení."
+        "description": "Kam Awaz ukládá vaše modely, historii a nastavení."
       },
       "sourceCode": {
         "title": "Zdrojový kód",
@@ -1460,12 +1460,12 @@
       },
       "license": {
         "title": "Licence",
-        "description": "SpeakoFlow je open source pod licencí MIT a staví na projektu Handy (také MIT) od CJ Paise.",
+        "description": "Awaz je open source pod licencí MIT a staví na projektu Handy (také MIT) od CJ Paise.",
         "button": "Zobrazit licenci"
       },
       "supportDevelopment": {
         "title": "Podpořte vývoj",
-        "description": "Pomozte nám dál vyvíjet SpeakoFlow",
+        "description": "Pomozte nám dál vyvíjet Awaz",
         "button": "Přispět"
       }
     },
@@ -1473,7 +1473,7 @@
       "enable": {
         "title": "Asistent",
         "label": "Zapnout asistenta",
-        "description": "Vypnutím necháte ze SpeakoFlow jen diktování. Plovoucí panel se zavře a už se nenačte, jeho zkratky se uvolní a paměť, kterou zabírá, se vrátí. Generovat s Flow a čištění pomocí AI fungují dál."
+        "description": "Vypnutím necháte ze Awaz jen diktování. Plovoucí panel se zavře a už se nenačte, jeho zkratky se uvolní a paměť, kterou zabírá, se vrátí. Generovat s Flow a čištění pomocí AI fungují dál."
       },
       "shortcuts": {
         "title": "Zkratky"
@@ -1512,7 +1512,7 @@
         "deleteModelFailed": "Model se nepodařilo smazat.",
         "finderSectionTitle": "Další modely na zařízení",
         "finderTitle": "Procházet Hugging Face",
-        "finderDescription": "Prohledejte tisíce modelů GGUF a stáhněte si jeden přímo do SpeakoFlow.",
+        "finderDescription": "Prohledejte tisíce modelů GGUF a stáhněte si jeden přímo do Awaz.",
         "finderAction": "Najít model",
         "huggingFaceTitle": "Vaše modely",
         "catalogEmpty": "Právě teď nejsou dostupné žádné doporučené místní modely."
@@ -1635,7 +1635,7 @@
           "label": "Kdy snímat"
         },
         "screenRecording": {
-          "description": "Zobrazení obrazovky vyžaduje na macOS oprávnění k nahrávání obrazovky. Udělte ho v Nastavení systému a pak SpeakoFlow restartujte, aby se změna projevila.",
+          "description": "Zobrazení obrazovky vyžaduje na macOS oprávnění k nahrávání obrazovky. Udělte ho v Nastavení systému a pak Awaz restartujte, aby se změna projevila.",
           "grant": "Otevřít Nastavení systému"
         }
       },
@@ -1812,7 +1812,7 @@
         "testGpuMoved": "Grafická karta ukázku zkreslila, takže byla ztlumena. Kokoro teď používá procesor, otestujte to znovu a uslyšíte ho.",
         "testGpuForced": "Grafická karta ukázku zkreslila, takže byla ztlumena. Nastavte Běží na na Automaticky nebo Procesoru.",
         "testGpuSuspect": "Ukázka vyšla zkreslená, takže byla ztlumena. Otestujte to znovu a ověřte grafickou kartu.",
-        "testPhrase": "Ahoj! Toto je test hlasového výstupu SpeakoFlow.",
+        "testPhrase": "Ahoj! Toto je test hlasového výstupu Awaz.",
         "downloadStart": "Stahuji hlas Kokoro…",
         "downloadProgress": "Stahuji hlas Kokoro… {{progress}}%",
         "downloadReady": "Hlas Kokoro je připravený ✓",
@@ -1999,7 +1999,7 @@
     "list": {
       "title": "Nahrané schůzky",
       "emptyTitle": "Zatím žádné schůzky",
-      "emptyHint": "Před hovorem spusťte nahrávání a SpeakoFlow uchová přepis rozdělený podle toho, kdo mluvil.",
+      "emptyHint": "Před hovorem spusťte nahrávání a Awaz uchová přepis rozdělený podle toho, kdo mluvil.",
       "loadMore": "Načíst další",
       "speakers_one": "{{count}} mluvčí",
       "speakers_few": "{{count}} mluvčí",
@@ -2167,7 +2167,7 @@
   },
   "accessibility": {
     "permissionsRequired": "Vyžadována oprávnění usnadnění přístupu",
-    "permissionsDescription": "SpeakoFlow potřebuje oprávnění usnadnění přístupu, aby mohlo psát přepsaný text.",
+    "permissionsDescription": "Awaz potřebuje oprávnění usnadnění přístupu, aby mohlo psát přepsaný text.",
     "openSettings": "Otevřít Nastavení systému",
     "dismiss": "Zavřít"
   },
@@ -2196,7 +2196,7 @@
   },
   "appLanguage": {
     "title": "Jazyk aplikace",
-    "description": "Změňte jazyk rozhraní SpeakoFlow"
+    "description": "Změňte jazyk rozhraní Awaz"
   },
   "overlay": {
     "preparing": "Připravuji mikrofon…",
@@ -2559,7 +2559,7 @@
       "performance": "Výkon"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "Verze {{version}}",
       "project": "Projekt",
       "docs": "Dokumentace",
@@ -2577,7 +2577,7 @@
     "subtitleTap": "V jakékoli aplikaci stiskněte zkratku, mluvte a stiskněte ji znovu. Vaše slova se objeví tam, kde je kurzor.",
     "needsModel": {
       "title": "Pro diktování vyberte model pro přepis.",
-      "description": "SpeakoFlow potřebuje model převodu řeči na text, než bude moct psát, co říkáte.",
+      "description": "Awaz potřebuje model převodu řeči na text, než bude moct psát, co říkáte.",
       "action": "Vybrat model"
     },
     "stats": {
@@ -2658,8 +2658,8 @@
         "open": "Nastavení klávesnice"
       },
       "linux": {
-        "wayland": "Ve Waylandu předává pracovní prostředí tyto klávesy aplikaci SpeakoFlow jen tehdy, když je některé z jejích oken vpředu. Chcete-li je používat v každé aplikaci, přidejte je jako zkratky v nastavení systému.",
-        "noAccess": "SpeakoFlow Keys na tomto počítači nemůže číst klávesnici, takže tyto zkratky zatím nic nedělají.",
+        "wayland": "Ve Waylandu předává pracovní prostředí tyto klávesy aplikaci Awaz jen tehdy, když je některé z jejích oken vpředu. Chcete-li je používat v každé aplikaci, přidejte je jako zkratky v nastavení systému.",
+        "noAccess": "Awaz Keys na tomto počítači nemůže číst klávesnici, takže tyto zkratky zatím nic nedělají.",
         "setUp": "Nastavit",
         "where": {
           "gnome": "Otevřete Nastavení → Klávesnice → Zobrazit a přizpůsobit klávesové zkratky → Vlastní zkratky, přidejte jednu pro každý příkaz níže a stiskněte požadované klávesy.",
@@ -2667,7 +2667,7 @@
           "other": "Pro každý příkaz níže přidejte vlastní zkratku v nastavení klávesnice svého prostředí, nebo řádek bind v konfiguraci kompozitoru."
         },
         "tapOnly": "Takto přidaná zkratka funguje jako „Stiskem zapnout/vypnout“: jedním stiskem začnete, dalším skončíte.",
-        "access": "Nebo povolte SpeakoFlow Keys číst klávesnici. Spusťte toto v terminálu a pak se odhlaste a znovu přihlaste:",
+        "access": "Nebo povolte Awaz Keys číst klávesnici. Spusťte toto v terminálu a pak se odhlaste a znovu přihlaste:",
         "copy": "Kopírovat",
         "copied": "Zkopírováno"
       }
@@ -2701,7 +2701,7 @@
     }
   },
   "modelsHub": {
-    "description": "Každou úlohu v SpeakoFlow obstarává model, který si vyberete. Spusťte ho na tomto počítači kvůli soukromí, nebo v cloudu kvůli rychlosti.",
+    "description": "Každou úlohu v Awaz obstarává model, který si vyberete. Spusťte ho na tomto počítači kvůli soukromí, nebo v cloudu kvůli rychlosti.",
     "addLocal": "Přidat soubor modelu",
     "privacyNote": "Modely na tomto počítači nikam neposílají váš hlas ani text. Cloudové modely je posílají vybranému poskytovateli pomocí vašeho API klíče.",
     "inUse": "Používá se",
@@ -2851,12 +2851,12 @@
     "shortcutRow": "Zkratka"
   },
   "dictionary": {
-    "description": "Naučte SpeakoFlow jména a výrazy, které používáte, a nastavte zkratky, které se rozvinou do delšího textu.",
+    "description": "Naučte Awaz jména a výrazy, které používáte, a nastavte zkratky, které se rozvinou do delšího textu.",
     "words": {
       "title": "Vaše slova",
-      "description": "Jména, odborné výrazy a pravopis, které má SpeakoFlow vždy napsat správně.",
+      "description": "Jména, odborné výrazy a pravopis, které má Awaz vždy napsat správně.",
       "placeholder": "Přidejte jméno, výraz nebo pravopis…",
-      "empty": "Zatím tu nic není. Přidejte slova, která SpeakoFlow stále píše špatně."
+      "empty": "Zatím tu nic není. Přidejte slova, která Awaz stále píše špatně."
     },
     "replacements": {
       "title": "Náhrady",
@@ -3355,11 +3355,11 @@
     "restored": "Vaše nastavení byla poškozená, a proto byla obnovena ze zálohy.",
     "restoredDescription": "Nejnovější změny mohou chybět.",
     "unrecoverableTitle": "Nastavení se nepodařilo obnovit",
-    "unrecoverableDescription": "SpeakoFlow se spustil s výchozím nastavením. Poškozený soubor byl uložen jako {{file}}.",
+    "unrecoverableDescription": "Awaz se spustil s výchozím nastavením. Poškozený soubor byl uložen jako {{file}}.",
     "notSavingTitle": "Změny nastavení se neuloží",
-    "notSavingDescription": "Soubor s nastavením nešlo přečíst, a tak zůstal beze změny. Restartujte SpeakoFlow a zkuste to znovu.",
+    "notSavingDescription": "Soubor s nastavením nešlo přečíst, a tak zůstal beze změny. Restartujte Awaz a zkuste to znovu.",
     "saveFailingTitle": "Nastavení se neukládá",
-    "saveFailingDescription": "Vaše poslední změny zatím nejsou uložené. SpeakoFlow to bude zkoušet dál.",
+    "saveFailingDescription": "Vaše poslední změny zatím nejsou uložené. Awaz to bude zkoušet dál.",
     "dismiss": "Zavřít"
   }
 }

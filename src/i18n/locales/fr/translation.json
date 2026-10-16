@@ -35,10 +35,10 @@
     "downloading": "Téléchargement… {{progress}} %",
     "downloadingUnknown": "Téléchargement…",
     "installing": "Installation…",
-    "reopening": "SpeakoFlow se ferme pour installer la mise à jour et se rouvrira dans quelques secondes.",
+    "reopening": "Awaz se ferme pour installer la mise à jour et se rouvrira dans quelques secondes.",
     "updatedTo": "Mis à jour vers la version {{version}}",
     "restart": "Redémarrer maintenant",
-    "readyToRestart": "La mise à jour est installée. Redémarrez SpeakoFlow pour en profiter.",
+    "readyToRestart": "La mise à jour est installée. Redémarrez Awaz pour en profiter.",
     "installFailed": "La mise à jour ne s'est pas installée. Vous pouvez réessayer, ou télécharger le programme d'installation et le lancer vous-même.",
     "downloadFailed": "Le téléchargement n'a pas abouti. Vérifiez votre connexion et réessayez.",
     "downloadInstaller": "Télécharger le programme d'installation",
@@ -49,13 +49,13 @@
     "showInFolder": "Afficher dans le dossier",
     "viewRelease": "Voir sur GitHub",
     "hint": {
-      "windows": "SpeakoFlow se ferme, installe la mise à jour et se rouvre. Vous n'avez rien d'autre à faire.",
-      "macos": "SpeakoFlow redémarre sur la nouvelle version. macOS peut ensuite vous redemander d'autoriser le microphone et l'accessibilité.",
-      "linux": "SpeakoFlow redémarre sur la nouvelle version. Une installation .deb vous demande d'abord votre mot de passe."
+      "windows": "Awaz se ferme, installe la mise à jour et se rouvre. Vous n'avez rien d'autre à faire.",
+      "macos": "Awaz redémarre sur la nouvelle version. macOS peut ensuite vous redemander d'autoriser le microphone et l'accessibilité.",
+      "linux": "Awaz redémarre sur la nouvelle version. Une installation .deb vous demande d'abord votre mot de passe."
     },
     "modes": {
       "portable": "Il s'agit de la version portable, qui ne peut pas se remplacer elle-même. Téléchargez la nouvelle version et copiez-y votre dossier Data.",
-      "packageManager": "SpeakoFlow a été installé par votre gestionnaire de paquets : mettez-le à jour depuis celui-ci, par exemple avec yay -Syu speakoflow-bin.",
+      "packageManager": "Awaz a été installé par votre gestionnaire de paquets : mettez-le à jour depuis celui-ci, par exemple avec yay -Syu speakoflow-bin.",
       "download": "Cette copie ne peut pas se mettre à jour d'elle-même. Téléchargez le programme d'installation et lancez-le pour obtenir la nouvelle version."
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "Envoyer un commentaire",
     "title": "Envoyer un commentaire",
-    "description": "Je lis chaque message moi-même, alors dites-le comme ça vient. Merci de m'aider à améliorer SpeakoFlow.",
+    "description": "Je lis chaque message moi-même, alors dites-le comme ça vient. Merci de m'aider à améliorer Awaz.",
     "kind": {
       "label": "Type de commentaire",
       "bug": "Bug",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "Que s'est-il passé, et à quoi vous attendiez-vous ?",
-      "idea": "Qu'est-ce qui rendrait SpeakoFlow plus utile pour vous ?",
+      "idea": "Qu'est-ce qui rendrait Awaz plus utile pour vous ?",
       "question": "Que voulez-vous savoir ?"
     },
     "messageLabel": "Message",
@@ -160,10 +160,10 @@
       "retry": "Réessayer"
     },
     "tour": {
-      "features": "Ce que fait SpeakoFlow",
+      "features": "Ce que fait Awaz",
       "count": "{{current}} sur {{total}}",
       "next": "Suivant",
-      "finish": "Ouvrir SpeakoFlow",
+      "finish": "Ouvrir Awaz",
       "tabs": {
         "dictate": "Dictée",
         "ask": "Assistant",
@@ -241,7 +241,7 @@
       "ready": "Tout est prêt"
     },
     "speechToText": {
-      "title": "Comment SpeakoFlow doit-il vous entendre ?",
+      "title": "Comment Awaz doit-il vous entendre ?",
       "subtitle": "Cela transforme votre voix en texte, directement sur votre machine. Choisissez-en un, changez à tout moment.",
       "cards": {
         "fast": {
@@ -286,7 +286,7 @@
       "downloadStarted": "Téléchargement de votre modèle en arrière-plan."
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "Applique les commandes dictées comme « nouveau paragraphe » et « oublie ça ». Anglais uniquement.",
       "pill": "Nettoie votre dictée",
       "recommendedForDictation": "Recommandé pour la dictée",
@@ -306,7 +306,7 @@
       "downloadingVoice": "Votre modèle de voix arrive. {{percentage}} % effectués.",
       "downloadingGeneric": "Téléchargement en cours. {{percentage}} % effectués.",
       "signOff": "C'est tout. Allez, dites quelque chose.",
-      "openApp": "Ouvrir SpeakoFlow"
+      "openApp": "Ouvrir Awaz"
     },
     "errors": {
       "selectModel": "Impossible de sélectionner ce modèle. Veuillez réessayer.",
@@ -438,7 +438,7 @@
     },
     "permissions": {
       "title": "Autorisations requises",
-      "description": "SpeakoFlow a besoin de quelques autorisations pour fonctionner correctement.",
+      "description": "Awaz a besoin de quelques autorisations pour fonctionner correctement.",
       "microphone": {
         "title": "Accès au microphone",
         "description": "Nécessaire pour entendre votre voix pour la transcription."
@@ -448,7 +448,7 @@
         "description": "Nécessaire pour taper le texte transcrit dans vos applications.",
         "stuckHint": "Déjà activé dans les Réglages Système ? Après une mise à jour, macOS peut conserver une autorisation qui ne correspond plus à cette version.",
         "reset": "Réinitialiser l'autorisation",
-        "resetDone": "Réactivez maintenant SpeakoFlow dans les Réglages Système."
+        "resetDone": "Réactivez maintenant Awaz dans les Réglages Système."
       },
       "grant": "Accorder l'autorisation",
       "granted": "Accordé",
@@ -457,7 +457,7 @@
       "errors": {
         "checkFailed": "Impossible de vérifier les autorisations. Veuillez réessayer.",
         "requestFailed": "Impossible de demander l'autorisation. Veuillez réessayer.",
-        "resetFailed": "Impossible de réinitialiser l'autorisation. Retirez SpeakoFlow de la liste Accessibilité, puis ajoutez-le à nouveau."
+        "resetFailed": "Impossible de réinitialiser l'autorisation. Retirez Awaz de la liste Accessibilité, puis ajoutez-le à nouveau."
       }
     },
     "frame": {
@@ -758,7 +758,7 @@
         "rescanDone_one": "{{count}} modèle local trouvé.",
         "rescanDone_many": "{{count}} modèles locaux trouvés.",
         "rescanDone_other": "{{count}} modèles locaux trouvés.",
-        "footnote": "Les dossiers liés sont réanalysés au démarrage de SpeakoFlow, donc les modèles que vous y ajoutez ensuite apparaissent tout seuls. Délier un dossier ou retirer un modèle le retire seulement de cette liste — vos fichiers restent là où ils sont.",
+        "footnote": "Les dossiers liés sont réanalysés au démarrage de Awaz, donc les modèles que vous y ajoutez ensuite apparaissent tout seuls. Délier un dossier ou retirer un modèle le retire seulement de cette liste — vos fichiers restent là où ils sont.",
         "removeTitle": "Retirer de la liste ?",
         "removeConfirm": "Retirer « {{modelName}} » de votre liste de modèles ?\n\nLe fichier lui-même reste là où il est :\n{{path}}",
         "missingBadge": "Fichier introuvable",
@@ -859,15 +859,15 @@
       },
       "autostart": {
         "label": "Lancer au démarrage",
-        "description": "Ouvrir SpeakoFlow automatiquement lorsque vous vous connectez."
+        "description": "Ouvrir Awaz automatiquement lorsque vous vous connectez."
       },
       "showTrayIcon": {
         "label": "Afficher l'icône dans la barre système",
-        "description": "Garder SpeakoFlow dans votre barre système."
+        "description": "Garder Awaz dans votre barre système."
       },
       "closeBehavior": {
         "label": "Quitter lorsque je ferme la fenêtre",
-        "description": "Lorsque cette option est désactivée, fermer la fenêtre laisse SpeakoFlow actif dans la barre système et vos raccourcis continuent de fonctionner. Lorsqu'elle est activée, fermer la fenêtre quitte complètement l'application."
+        "description": "Lorsque cette option est désactivée, fermer la fenêtre laisse Awaz actif dans la barre système et vos raccourcis continuent de fonctionner. Lorsqu'elle est activée, fermer la fenêtre quitte complètement l'application."
       },
       "overlayStyle": {
         "title": "Fenêtre d'enregistrement",
@@ -961,8 +961,8 @@
       },
       "customWords": {
         "title": "Mots personnalisés",
-        "description": "Les noms, produits et expressions que SpeakoFlow doit orthographier à votre manière.",
-        "info": "Exemple : ajoutez « Kokoro » si SpeakoFlow écrit « Coco row ».",
+        "description": "Les noms, produits et expressions que Awaz doit orthographier à votre manière.",
+        "info": "Exemple : ajoutez « Kokoro » si Awaz écrit « Coco row ».",
         "placeholder": "Ajoutez un nom, un terme ou une courte expression",
         "add": "Ajouter",
         "empty": "Aucun mot personnalisé pour l'instant.",
@@ -971,7 +971,7 @@
       },
       "autoLearn": {
         "label": "Apprendre les mots que je corrige",
-        "description": "Retient votre orthographe quand vous corrigez un mot mal compris par SpeakoFlow.",
+        "description": "Retient votre orthographe quand vous corrigez un mot mal compris par Awaz.",
         "info": "Seul le champ dans lequel il vient d'écrire est lu, pendant environ une minute. Rien n'est envoyé en ligne, et chaque mot appris est listé ici.",
         "unsupported": "L'apprentissage des corrections n'est disponible que sur Windows pour l'instant. Vous pouvez toujours ajouter des mots à la main ci-dessus.",
         "learnedTitle": "Appris à partir de vos corrections",
@@ -985,7 +985,7 @@
         "title": "Remplacements de texte",
         "description": "Remplacez une expression de votre transcription par un texte que vous utilisez souvent. Exemple : « mon e-mail » devient « alex@example.com ».",
         "rulesTitle": "Règles de remplacement",
-        "rulesHint": "Choisissez ce que SpeakoFlow entend et ce qu'il doit insérer.",
+        "rulesHint": "Choisissez ce que Awaz entend et ce qu'il doit insérer.",
         "empty": "Créez une règle pour une expression que vous dites souvent.",
         "addFirst": "Créer la première règle",
         "addRule": "Ajouter un remplacement",
@@ -1233,7 +1233,7 @@
         },
         "model": {
           "emptyTitle": "Aucun modèle de nettoyage pour l'instant",
-          "emptyDescription": "SpeakoFlow Mini est un petit téléchargement conçu pour ça.",
+          "emptyDescription": "Awaz Mini est un petit téléchargement conçu pour ça.",
           "choose": "Choisir un modèle",
           "tunedBadge": "Optimisé pour le nettoyage"
         },
@@ -1241,7 +1241,7 @@
           "title": "Choisissez votre modèle de nettoyage",
           "description": "Le nettoyage s'exécute après chaque dictée : la vitesse compte donc plus que la taille. Tout fonctionne hors ligne.",
           "recommendedTitle": "Recommandé pour le nettoyage",
-          "recommendedDescription": "SpeakoFlow Mini est entraîné pour cette seule tâche et y surpasse des modèles bien plus gros."
+          "recommendedDescription": "Awaz Mini est entraîné pour cette seule tâche et y surpasse des modèles bien plus gros."
         },
         "promptGroupTitle": "Instructions de nettoyage",
         "tunedModelNotice": "Ce modèle est affiné pour le nettoyage de dictées en anglais : il donne son meilleur avec le prompt recommandé et sans style.",
@@ -1346,7 +1346,7 @@
       },
       "updateChecks": {
         "label": "Vérifier les mises à jour automatiquement",
-        "description": "Recherche une nouvelle version au démarrage de SpeakoFlow, puis toutes les 12 heures. Vous pouvez toujours vérifier manuellement."
+        "description": "Recherche une nouvelle version au démarrage de Awaz, puis toutes les 12 heures. Vous pouvez toujours vérifier manuellement."
       },
       "soundTheme": {
         "label": "Thème sonore",
@@ -1442,7 +1442,7 @@
       },
       "appDataDirectory": {
         "title": "Dossier des données de l'application",
-        "description": "Où SpeakoFlow conserve vos modèles, votre historique et vos paramètres."
+        "description": "Où Awaz conserve vos modèles, votre historique et vos paramètres."
       },
       "sourceCode": {
         "title": "Code source",
@@ -1451,12 +1451,12 @@
       },
       "license": {
         "title": "Licence",
-        "description": "SpeakoFlow est un logiciel open source sous licence MIT, fondé sur Handy (également sous MIT) de CJ Pais.",
+        "description": "Awaz est un logiciel open source sous licence MIT, fondé sur Handy (également sous MIT) de CJ Pais.",
         "button": "Voir la licence"
       },
       "supportDevelopment": {
         "title": "Soutenir le développement",
-        "description": "Aidez-nous à continuer à développer SpeakoFlow",
+        "description": "Aidez-nous à continuer à développer Awaz",
         "button": "Faire un don"
       }
     },
@@ -1464,7 +1464,7 @@
       "enable": {
         "title": "Assistant",
         "label": "Activer l'assistant",
-        "description": "Désactivez cette option pour réduire SpeakoFlow à la dictée. Le panneau flottant est fermé et n'est jamais chargé, ses raccourcis sont libérés et la mémoire qu'il utilisait est rendue. Générer avec Flow et le nettoyage IA continuent de fonctionner."
+        "description": "Désactivez cette option pour réduire Awaz à la dictée. Le panneau flottant est fermé et n'est jamais chargé, ses raccourcis sont libérés et la mémoire qu'il utilisait est rendue. Générer avec Flow et le nettoyage IA continuent de fonctionner."
       },
       "shortcuts": {
         "title": "Raccourcis"
@@ -1503,7 +1503,7 @@
         "deleteModelFailed": "Impossible de supprimer le modèle.",
         "finderSectionTitle": "Plus de modèles sur l'appareil",
         "finderTitle": "Parcourir Hugging Face",
-        "finderDescription": "Cherchez parmi des milliers de modèles GGUF et téléchargez-en un directement dans SpeakoFlow.",
+        "finderDescription": "Cherchez parmi des milliers de modèles GGUF et téléchargez-en un directement dans Awaz.",
         "finderAction": "Trouver un modèle",
         "huggingFaceTitle": "Vos modèles",
         "catalogEmpty": "Aucun modèle local recommandé n'est disponible pour le moment."
@@ -1626,7 +1626,7 @@
           "label": "Moment de la capture"
         },
         "screenRecording": {
-          "description": "La vision d'écran nécessite l'autorisation d'enregistrement de l'écran sur macOS. Accordez-la dans les Réglages du système, puis redémarrez SpeakoFlow pour qu'elle prenne effet.",
+          "description": "La vision d'écran nécessite l'autorisation d'enregistrement de l'écran sur macOS. Accordez-la dans les Réglages du système, puis redémarrez Awaz pour qu'elle prenne effet.",
           "grant": "Ouvrir les Réglages du système"
         }
       },
@@ -1803,7 +1803,7 @@
         "testGpuMoved": "Votre carte graphique a déformé l'extrait, il a donc été coupé. Kokoro utilise maintenant le processeur : testez à nouveau pour l'entendre.",
         "testGpuForced": "Votre carte graphique a déformé l'extrait, il a donc été coupé. Réglez « S'exécute sur » sur Automatique ou Processeur.",
         "testGpuSuspect": "L'extrait est sorti déformé, il a donc été coupé. Testez à nouveau pour vérifier votre carte graphique.",
-        "testPhrase": "Bonjour ! Ceci est un test de la sortie vocale de SpeakoFlow.",
+        "testPhrase": "Bonjour ! Ceci est un test de la sortie vocale de Awaz.",
         "downloadStart": "Téléchargement de la voix Kokoro…",
         "downloadProgress": "Téléchargement de la voix Kokoro… {{progress}} %",
         "downloadReady": "Voix Kokoro prête ✓",
@@ -1990,7 +1990,7 @@
     "list": {
       "title": "Réunions enregistrées",
       "emptyTitle": "Aucune réunion pour l'instant",
-      "emptyHint": "Lancez l'enregistrement avant un appel : SpeakoFlow conserve la transcription, découpée par intervenant.",
+      "emptyHint": "Lancez l'enregistrement avant un appel : Awaz conserve la transcription, découpée par intervenant.",
       "loadMore": "Charger plus",
       "speakers_one": "{{count}} intervenant",
       "speakers_many": "{{count}} intervenants",
@@ -2155,7 +2155,7 @@
   },
   "accessibility": {
     "permissionsRequired": "Autorisations d'accessibilité requises",
-    "permissionsDescription": "SpeakoFlow a besoin des autorisations d'accessibilité pour taper le texte transcrit.",
+    "permissionsDescription": "Awaz a besoin des autorisations d'accessibilité pour taper le texte transcrit.",
     "openSettings": "Ouvrir les Préférences Système",
     "dismiss": "Ignorer"
   },
@@ -2184,7 +2184,7 @@
   },
   "appLanguage": {
     "title": "Langue de l'application",
-    "description": "Changer la langue de l'interface de SpeakoFlow"
+    "description": "Changer la langue de l'interface de Awaz"
   },
   "overlay": {
     "preparing": "Préparation du micro…",
@@ -2541,7 +2541,7 @@
       "performance": "Performances"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "Version {{version}}",
       "project": "Projet",
       "docs": "Documentation",
@@ -2559,7 +2559,7 @@
     "subtitleTap": "Appuyez sur votre raccourci dans n'importe quelle application, parlez, puis appuyez à nouveau. Vos mots apparaissent à l'emplacement du curseur.",
     "needsModel": {
       "title": "Choisissez un modèle vocal pour commencer à dicter.",
-      "description": "SpeakoFlow a besoin d'un modèle de reconnaissance vocale avant de pouvoir écrire ce que vous dites.",
+      "description": "Awaz a besoin d'un modèle de reconnaissance vocale avant de pouvoir écrire ce que vous dites.",
       "action": "Choisir un modèle"
     },
     "stats": {
@@ -2637,8 +2637,8 @@
         "open": "Réglages du clavier"
       },
       "linux": {
-        "wayland": "Sous Wayland, votre bureau ne transmet ces touches à SpeakoFlow que lorsqu'une de ses fenêtres est au premier plan. Pour les utiliser dans n'importe quelle app, ajoutez-les comme raccourcis dans les paramètres du système.",
-        "noAccess": "SpeakoFlow Keys ne peut pas lire le clavier sur cet ordinateur, ces raccourcis ne font donc encore rien.",
+        "wayland": "Sous Wayland, votre bureau ne transmet ces touches à Awaz que lorsqu'une de ses fenêtres est au premier plan. Pour les utiliser dans n'importe quelle app, ajoutez-les comme raccourcis dans les paramètres du système.",
+        "noAccess": "Awaz Keys ne peut pas lire le clavier sur cet ordinateur, ces raccourcis ne font donc encore rien.",
         "setUp": "Configurer",
         "where": {
           "gnome": "Ouvrez Paramètres → Clavier → Afficher et personnaliser les raccourcis → Raccourcis personnalisés, ajoutez-en un pour chaque commande ci-dessous et appuyez sur les touches voulues.",
@@ -2646,7 +2646,7 @@
           "other": "Ajoutez un raccourci personnalisé dans les paramètres clavier de votre bureau, ou une ligne bind dans la configuration de votre compositeur, pour chaque commande ci-dessous."
         },
         "tapOnly": "Un raccourci ajouté ainsi fonctionne comme « Appuyer pour activer » : appuyez une fois pour démarrer et une autre fois pour arrêter.",
-        "access": "Ou autorisez SpeakoFlow Keys à lire le clavier. Exécutez ceci dans un terminal, puis déconnectez-vous et reconnectez-vous :",
+        "access": "Ou autorisez Awaz Keys à lire le clavier. Exécutez ceci dans un terminal, puis déconnectez-vous et reconnectez-vous :",
         "copy": "Copier",
         "copied": "Copié"
       }
@@ -2678,7 +2678,7 @@
     }
   },
   "modelsHub": {
-    "description": "Dans SpeakoFlow, chaque tâche est confiée à un modèle de votre choix. Exécutez-le sur cet ordinateur pour la confidentialité, ou dans le cloud pour la rapidité.",
+    "description": "Dans Awaz, chaque tâche est confiée à un modèle de votre choix. Exécutez-le sur cet ordinateur pour la confidentialité, ou dans le cloud pour la rapidité.",
     "addLocal": "Ajouter un fichier de modèle",
     "privacyNote": "Les modèles sur cet ordinateur n'envoient jamais votre voix ni votre texte ailleurs. Les modèles cloud les envoient au fournisseur choisi, avec votre clé API.",
     "inUse": "Utilisé",
@@ -2828,12 +2828,12 @@
     "shortcutRow": "Raccourci"
   },
   "dictionary": {
-    "description": "Apprenez à SpeakoFlow les noms et les termes que vous utilisez, et créez des raccourcis qui se développent en texte plus long.",
+    "description": "Apprenez à Awaz les noms et les termes que vous utilisez, et créez des raccourcis qui se développent en texte plus long.",
     "words": {
       "title": "Vos mots",
-      "description": "Noms, jargon et orthographes que SpeakoFlow doit toujours respecter.",
+      "description": "Noms, jargon et orthographes que Awaz doit toujours respecter.",
       "placeholder": "Ajoutez un nom, un terme ou une orthographe…",
-      "empty": "Rien pour l'instant. Ajoutez les mots sur lesquels SpeakoFlow se trompe souvent."
+      "empty": "Rien pour l'instant. Ajoutez les mots sur lesquels Awaz se trompe souvent."
     },
     "replacements": {
       "title": "Remplacements",
@@ -3321,11 +3321,11 @@
     "restored": "Vos paramètres étaient endommagés et ont été restaurés à partir d'une sauvegarde.",
     "restoredDescription": "Vos dernières modifications peuvent manquer.",
     "unrecoverableTitle": "Impossible de récupérer vos paramètres",
-    "unrecoverableDescription": "SpeakoFlow a démarré avec les paramètres par défaut. Le fichier endommagé a été conservé sous le nom {{file}}.",
+    "unrecoverableDescription": "Awaz a démarré avec les paramètres par défaut. Le fichier endommagé a été conservé sous le nom {{file}}.",
     "notSavingTitle": "Les modifications des paramètres ne seront pas enregistrées",
-    "notSavingDescription": "Le fichier de paramètres n'a pas pu être lu, il a donc été laissé tel quel. Redémarrez SpeakoFlow pour réessayer.",
+    "notSavingDescription": "Le fichier de paramètres n'a pas pu être lu, il a donc été laissé tel quel. Redémarrez Awaz pour réessayer.",
     "saveFailingTitle": "Les paramètres ne sont pas enregistrés",
-    "saveFailingDescription": "Vos dernières modifications ne sont pas encore enregistrées. SpeakoFlow continue d'essayer.",
+    "saveFailingDescription": "Vos dernières modifications ne sont pas encore enregistrées. Awaz continue d'essayer.",
     "dismiss": "Ignorer"
   }
 }

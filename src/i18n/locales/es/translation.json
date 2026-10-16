@@ -35,10 +35,10 @@
     "downloading": "Descargando… {{progress}} %",
     "downloadingUnknown": "Descargando…",
     "installing": "Instalando…",
-    "reopening": "SpeakoFlow se cerrará para instalar la actualización y se volverá a abrir en unos segundos.",
+    "reopening": "Awaz se cerrará para instalar la actualización y se volverá a abrir en unos segundos.",
     "updatedTo": "Actualizado a la versión {{version}}",
     "restart": "Reiniciar ahora",
-    "readyToRestart": "La actualización está instalada. Reinicia SpeakoFlow para empezar a usarla.",
+    "readyToRestart": "La actualización está instalada. Reinicia Awaz para empezar a usarla.",
     "installFailed": "La actualización no se instaló. Puedes volver a intentarlo, o descargar el instalador y ejecutarlo tú mismo.",
     "downloadFailed": "La descarga no terminó. Revisa tu conexión y vuelve a intentarlo.",
     "downloadInstaller": "Descargar el instalador",
@@ -49,13 +49,13 @@
     "showInFolder": "Mostrar en la carpeta",
     "viewRelease": "Ver en GitHub",
     "hint": {
-      "windows": "SpeakoFlow se cierra, instala la actualización y se vuelve a abrir. No tienes que hacer nada más.",
-      "macos": "SpeakoFlow se reinicia con la nueva versión. Es posible que después macOS te vuelva a pedir permiso para el micrófono y la accesibilidad.",
-      "linux": "SpeakoFlow se reinicia con la nueva versión. Una instalación .deb te pide primero la contraseña."
+      "windows": "Awaz se cierra, instala la actualización y se vuelve a abrir. No tienes que hacer nada más.",
+      "macos": "Awaz se reinicia con la nueva versión. Es posible que después macOS te vuelva a pedir permiso para el micrófono y la accesibilidad.",
+      "linux": "Awaz se reinicia con la nueva versión. Una instalación .deb te pide primero la contraseña."
     },
     "modes": {
       "portable": "Esta es la versión portátil, que no puede reemplazarse a sí misma. Descarga la nueva versión y copia en ella tu carpeta Data.",
-      "packageManager": "SpeakoFlow se instaló con tu gestor de paquetes, así que actualízalo desde ahí, por ejemplo con yay -Syu speakoflow-bin.",
+      "packageManager": "Awaz se instaló con tu gestor de paquetes, así que actualízalo desde ahí, por ejemplo con yay -Syu speakoflow-bin.",
       "download": "Esta copia no puede actualizarse por sí sola. Descarga el instalador y ejecútalo para obtener la nueva versión."
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "Enviar comentarios",
     "title": "Enviar comentarios",
-    "description": "Leo todos los mensajes yo mismo, así que cuéntamelo como te salga. Gracias por ayudar a mejorar SpeakoFlow.",
+    "description": "Leo todos los mensajes yo mismo, así que cuéntamelo como te salga. Gracias por ayudar a mejorar Awaz.",
     "kind": {
       "label": "Tipo de comentario",
       "bug": "Error",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "¿Qué pasó y qué esperabas que pasara?",
-      "idea": "¿Qué haría que SpeakoFlow fuera mejor para ti?",
+      "idea": "¿Qué haría que Awaz fuera mejor para ti?",
       "question": "¿Qué te gustaría saber?"
     },
     "messageLabel": "Mensaje",
@@ -160,10 +160,10 @@
       "retry": "Reintentar"
     },
     "tour": {
-      "features": "Lo que hace SpeakoFlow",
+      "features": "Lo que hace Awaz",
       "count": "{{current}} de {{total}}",
       "next": "Siguiente",
-      "finish": "Abrir SpeakoFlow",
+      "finish": "Abrir Awaz",
       "tabs": {
         "dictate": "Dictado",
         "ask": "Asistente",
@@ -241,7 +241,7 @@
       "ready": "Todo listo"
     },
     "speechToText": {
-      "title": "¿Cómo debe escucharte SpeakoFlow?",
+      "title": "¿Cómo debe escucharte Awaz?",
       "subtitle": "Esto convierte tu voz en texto, directamente en tu equipo. Elige uno y cámbialo cuando quieras.",
       "cards": {
         "fast": {
@@ -286,7 +286,7 @@
       "downloadStarted": "Descargando tu modelo en segundo plano."
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "Aplica ediciones dictadas como «nuevo párrafo» y «borra eso». Solo inglés.",
       "pill": "Limpia tu dictado",
       "recommendedForDictation": "Recomendado para el dictado",
@@ -306,7 +306,7 @@
       "downloadingVoice": "Tu modelo de voz está llegando. {{percentage}}% completado.",
       "downloadingGeneric": "La descarga sigue en curso. {{percentage}}% completado.",
       "signOff": "Eso es todo. Ve y di algo.",
-      "openApp": "Abrir SpeakoFlow"
+      "openApp": "Abrir Awaz"
     },
     "errors": {
       "selectModel": "No se pudo seleccionar ese modelo. Inténtalo de nuevo.",
@@ -438,7 +438,7 @@
     },
     "permissions": {
       "title": "Permisos necesarios",
-      "description": "SpeakoFlow necesita algunos permisos para funcionar correctamente.",
+      "description": "Awaz necesita algunos permisos para funcionar correctamente.",
       "microphone": {
         "title": "Acceso al micrófono",
         "description": "Necesario para escuchar tu voz para la transcripción."
@@ -448,7 +448,7 @@
         "description": "Necesario para escribir el texto transcrito en tus aplicaciones.",
         "stuckHint": "¿Ya está activado en Ajustes del Sistema? Tras una actualización, macOS puede conservar un permiso que ya no corresponde a esta versión.",
         "reset": "Restablecer permiso",
-        "resetDone": "Ahora vuelve a activar SpeakoFlow en Ajustes del Sistema."
+        "resetDone": "Ahora vuelve a activar Awaz en Ajustes del Sistema."
       },
       "grant": "Conceder permiso",
       "granted": "Concedido",
@@ -457,7 +457,7 @@
       "errors": {
         "checkFailed": "No se pudieron comprobar los permisos. Inténtalo de nuevo.",
         "requestFailed": "No se pudo solicitar el permiso. Inténtalo de nuevo.",
-        "resetFailed": "No se pudo restablecer el permiso. Quita SpeakoFlow de la lista de Accesibilidad y vuelve a añadirlo."
+        "resetFailed": "No se pudo restablecer el permiso. Quita Awaz de la lista de Accesibilidad y vuelve a añadirlo."
       }
     },
     "frame": {
@@ -758,7 +758,7 @@
         "rescanDone_one": "Se encontró {{count}} modelo local.",
         "rescanDone_many": "Se encontraron {{count}} modelos locales.",
         "rescanDone_other": "Se encontraron {{count}} modelos locales.",
-        "footnote": "Las carpetas vinculadas se vuelven a analizar cuando se inicia SpeakoFlow, así que los modelos que añadas después aparecen por su cuenta. Desvincular una carpeta o quitar un modelo solo lo saca de esta lista: tus archivos se quedan donde están.",
+        "footnote": "Las carpetas vinculadas se vuelven a analizar cuando se inicia Awaz, así que los modelos que añadas después aparecen por su cuenta. Desvincular una carpeta o quitar un modelo solo lo saca de esta lista: tus archivos se quedan donde están.",
         "removeTitle": "¿Quitar de la lista?",
         "removeConfirm": "¿Quitar «{{modelName}}» de tu lista de modelos?\n\nEl archivo se queda donde está:\n{{path}}",
         "missingBadge": "Falta el archivo",
@@ -859,15 +859,15 @@
       },
       "autostart": {
         "label": "Abrir al iniciar sesión",
-        "description": "Abre SpeakoFlow automáticamente cuando inicias sesión."
+        "description": "Abre Awaz automáticamente cuando inicias sesión."
       },
       "showTrayIcon": {
         "label": "Mostrar icono en la bandeja",
-        "description": "Mantén SpeakoFlow en la bandeja del sistema."
+        "description": "Mantén Awaz en la bandeja del sistema."
       },
       "closeBehavior": {
         "label": "Salir al cerrar la ventana",
-        "description": "Si está desactivado, al cerrar la ventana SpeakoFlow sigue en la bandeja del sistema y tus atajos continúan funcionando. Si está activado, cerrar la ventana cierra la aplicación por completo."
+        "description": "Si está desactivado, al cerrar la ventana Awaz sigue en la bandeja del sistema y tus atajos continúan funcionando. Si está activado, cerrar la ventana cierra la aplicación por completo."
       },
       "overlayStyle": {
         "title": "Superposición",
@@ -961,8 +961,8 @@
       },
       "customWords": {
         "title": "Palabras personalizadas",
-        "description": "Nombres, productos y frases que SpeakoFlow debe escribir a tu manera.",
-        "info": "Ejemplo: añade «Kokoro» si SpeakoFlow escribe «Coco row».",
+        "description": "Nombres, productos y frases que Awaz debe escribir a tu manera.",
+        "info": "Ejemplo: añade «Kokoro» si Awaz escribe «Coco row».",
         "placeholder": "Añade un nombre, término o frase corta",
         "add": "Agregar",
         "empty": "Aún no hay palabras personalizadas.",
@@ -971,7 +971,7 @@
       },
       "autoLearn": {
         "label": "Aprender las palabras que corrijo",
-        "description": "Recuerda cómo escribes una palabra cuando corriges algo que SpeakoFlow entendió mal.",
+        "description": "Recuerda cómo escribes una palabra cuando corriges algo que Awaz entendió mal.",
         "info": "Solo lee el campo en el que acaba de escribir, durante un minuto aproximadamente. No se sube nada y todas las palabras que aprende aparecen aquí.",
         "unsupported": "Por ahora, aprender de las correcciones solo está disponible en Windows. Puedes seguir añadiendo palabras a mano arriba.",
         "learnedTitle": "Aprendidas de tus correcciones",
@@ -985,7 +985,7 @@
         "title": "Reemplazos de texto",
         "description": "Sustituye una frase de tu transcripción por un texto que usas a menudo. Ejemplo: «mi correo» se convierte en «alex@example.com».",
         "rulesTitle": "Reglas de reemplazo",
-        "rulesHint": "Elige qué escucha SpeakoFlow y qué debe insertar.",
+        "rulesHint": "Elige qué escucha Awaz y qué debe insertar.",
         "empty": "Crea una regla para una frase que digas a menudo.",
         "addFirst": "Crear la primera regla",
         "addRule": "Añadir reemplazo",
@@ -1233,7 +1233,7 @@
         },
         "model": {
           "emptyTitle": "Aún no hay modelo de limpieza",
-          "emptyDescription": "SpeakoFlow Mini es una descarga pequeña hecha para esto.",
+          "emptyDescription": "Awaz Mini es una descarga pequeña hecha para esto.",
           "choose": "Elegir un modelo",
           "tunedBadge": "Ajustado para la limpieza"
         },
@@ -1241,7 +1241,7 @@
           "title": "Elige tu modelo de limpieza",
           "description": "La limpieza se ejecuta después de cada dictado, así que la velocidad importa más que el tamaño. Todo funciona sin conexión.",
           "recommendedTitle": "Recomendado para la limpieza",
-          "recommendedDescription": "SpeakoFlow Mini está entrenado para esta única tarea y en ella supera a modelos mucho más grandes."
+          "recommendedDescription": "Awaz Mini está entrenado para esta única tarea y en ella supera a modelos mucho más grandes."
         },
         "promptGroupTitle": "Instrucciones de limpieza",
         "tunedModelNotice": "Este modelo está afinado para limpiar dictados en inglés, así que funciona mejor con el prompt recomendado y sin estilo.",
@@ -1346,7 +1346,7 @@
       },
       "updateChecks": {
         "label": "Buscar actualizaciones automáticamente",
-        "description": "Busca una versión nueva al iniciar SpeakoFlow y cada 12 horas. Siempre puedes comprobarlo manualmente."
+        "description": "Busca una versión nueva al iniciar Awaz y cada 12 horas. Siempre puedes comprobarlo manualmente."
       },
       "soundTheme": {
         "label": "Tema de sonido",
@@ -1442,7 +1442,7 @@
       },
       "appDataDirectory": {
         "title": "Carpeta de datos de la aplicación",
-        "description": "Donde SpeakoFlow guarda tus modelos, tu historial y tus ajustes."
+        "description": "Donde Awaz guarda tus modelos, tu historial y tus ajustes."
       },
       "sourceCode": {
         "title": "Código fuente",
@@ -1451,12 +1451,12 @@
       },
       "license": {
         "title": "Licencia",
-        "description": "SpeakoFlow es de código abierto bajo la Licencia MIT y se basa en Handy (también MIT) de CJ Pais.",
+        "description": "Awaz es de código abierto bajo la Licencia MIT y se basa en Handy (también MIT) de CJ Pais.",
         "button": "Ver la licencia"
       },
       "supportDevelopment": {
         "title": "Apoyar el desarrollo",
-        "description": "Ayúdanos a seguir desarrollando SpeakoFlow",
+        "description": "Ayúdanos a seguir desarrollando Awaz",
         "button": "Donar"
       }
     },
@@ -1464,7 +1464,7 @@
       "enable": {
         "title": "Asistente",
         "label": "Activar el asistente",
-        "description": "Desactívalo para que SpeakoFlow sea solo dictado. El panel flotante se cierra y no se carga nunca, sus atajos quedan libres y se devuelve la memoria que usaba. Generar con Flow y la limpieza con IA siguen funcionando."
+        "description": "Desactívalo para que Awaz sea solo dictado. El panel flotante se cierra y no se carga nunca, sus atajos quedan libres y se devuelve la memoria que usaba. Generar con Flow y la limpieza con IA siguen funcionando."
       },
       "shortcuts": {
         "title": "Atajos"
@@ -1503,7 +1503,7 @@
         "deleteModelFailed": "No se pudo eliminar el modelo.",
         "finderSectionTitle": "Más modelos en el dispositivo",
         "finderTitle": "Explorar Hugging Face",
-        "finderDescription": "Busca entre miles de modelos GGUF y descarga uno directamente en SpeakoFlow.",
+        "finderDescription": "Busca entre miles de modelos GGUF y descarga uno directamente en Awaz.",
         "finderAction": "Buscar un modelo",
         "huggingFaceTitle": "Tus modelos",
         "catalogEmpty": "Ahora mismo no hay modelos locales recomendados disponibles."
@@ -1626,7 +1626,7 @@
           "label": "Momento de la captura"
         },
         "screenRecording": {
-          "description": "La visión de pantalla necesita el permiso de Grabación de pantalla de macOS. Concédelo en Ajustes del Sistema y luego reinicia SpeakoFlow para que surta efecto.",
+          "description": "La visión de pantalla necesita el permiso de Grabación de pantalla de macOS. Concédelo en Ajustes del Sistema y luego reinicia Awaz para que surta efecto.",
           "grant": "Abrir Ajustes del Sistema"
         }
       },
@@ -1803,7 +1803,7 @@
         "testGpuMoved": "Tu tarjeta gráfica distorsionó la muestra, así que se silenció. Kokoro usa ahora el procesador; vuelve a probar para escucharla.",
         "testGpuForced": "Tu tarjeta gráfica distorsionó la muestra, así que se silenció. Cambia «Se ejecuta en» a «Automático» o «Procesador».",
         "testGpuSuspect": "La muestra salió distorsionada, así que se silenció. Vuelve a probar para comprobar tu tarjeta gráfica.",
-        "testPhrase": "¡Hola! Esta es una prueba de la salida de voz de SpeakoFlow.",
+        "testPhrase": "¡Hola! Esta es una prueba de la salida de voz de Awaz.",
         "downloadStart": "Descargando la voz de Kokoro…",
         "downloadProgress": "Descargando la voz de Kokoro… {{progress}}%",
         "downloadReady": "Voz de Kokoro lista ✓",
@@ -1990,7 +1990,7 @@
     "list": {
       "title": "Reuniones grabadas",
       "emptyTitle": "Aún no hay reuniones",
-      "emptyHint": "Empieza a grabar antes de una llamada y SpeakoFlow guardará la transcripción, separada por quién hablaba.",
+      "emptyHint": "Empieza a grabar antes de una llamada y Awaz guardará la transcripción, separada por quién hablaba.",
       "loadMore": "Cargar más",
       "speakers_one": "{{count}} hablante",
       "speakers_many": "{{count}} hablantes",
@@ -2155,7 +2155,7 @@
   },
   "accessibility": {
     "permissionsRequired": "Se necesitan permisos de accesibilidad",
-    "permissionsDescription": "SpeakoFlow necesita permisos de accesibilidad para escribir texto transcrito.",
+    "permissionsDescription": "Awaz necesita permisos de accesibilidad para escribir texto transcrito.",
     "openSettings": "Abrir Ajustes del Sistema",
     "dismiss": "Descartar"
   },
@@ -2184,7 +2184,7 @@
   },
   "appLanguage": {
     "title": "Idioma de la aplicación",
-    "description": "Cambia el idioma de la interfaz de SpeakoFlow"
+    "description": "Cambia el idioma de la interfaz de Awaz"
   },
   "overlay": {
     "preparing": "Preparando el micrófono…",
@@ -2541,7 +2541,7 @@
       "performance": "Rendimiento"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "Versión {{version}}",
       "project": "Proyecto",
       "docs": "Documentación",
@@ -2559,7 +2559,7 @@
     "subtitleTap": "Pulsa tu atajo en cualquier aplicación, habla y vuelve a pulsarlo. Tus palabras aparecen donde está el cursor.",
     "needsModel": {
       "title": "Elige un modelo de voz para empezar a dictar.",
-      "description": "SpeakoFlow necesita un modelo de voz a texto antes de poder escribir lo que dices.",
+      "description": "Awaz necesita un modelo de voz a texto antes de poder escribir lo que dices.",
       "action": "Elegir un modelo"
     },
     "stats": {
@@ -2637,8 +2637,8 @@
         "open": "Ajustes de teclado"
       },
       "linux": {
-        "wayland": "En Wayland, tu escritorio solo pasa estas teclas a SpeakoFlow mientras una de sus ventanas está al frente. Para usarlas en cualquier app, añádelas como atajos en los ajustes del sistema.",
-        "noAccess": "SpeakoFlow Keys no puede leer el teclado en este equipo, así que estos atajos todavía no hacen nada.",
+        "wayland": "En Wayland, tu escritorio solo pasa estas teclas a Awaz mientras una de sus ventanas está al frente. Para usarlas en cualquier app, añádelas como atajos en los ajustes del sistema.",
+        "noAccess": "Awaz Keys no puede leer el teclado en este equipo, así que estos atajos todavía no hacen nada.",
         "setUp": "Configurar",
         "where": {
           "gnome": "Abre Configuración → Teclado → Ver y personalizar atajos → Atajos personalizados, añade uno por cada comando de abajo y pulsa las teclas que quieras.",
@@ -2646,7 +2646,7 @@
           "other": "Añade un atajo personalizado en los ajustes de teclado de tu escritorio, o una línea bind en la configuración de tu compositor, para cada comando de abajo."
         },
         "tapOnly": "Un atajo añadido así funciona como «Pulsa para activar o desactivar»: pulsa una vez para empezar y otra para parar.",
-        "access": "O deja que SpeakoFlow Keys lea el teclado. Ejecuta esto en una terminal y luego cierra la sesión y vuelve a entrar:",
+        "access": "O deja que Awaz Keys lea el teclado. Ejecuta esto en una terminal y luego cierra la sesión y vuelve a entrar:",
         "copy": "Copiar",
         "copied": "Copiado"
       }
@@ -2678,7 +2678,7 @@
     }
   },
   "modelsHub": {
-    "description": "Cada tarea de SpeakoFlow la hace un modelo que tú eliges. Ejecútalo en este equipo para mayor privacidad o en la nube para mayor velocidad.",
+    "description": "Cada tarea de Awaz la hace un modelo que tú eliges. Ejecútalo en este equipo para mayor privacidad o en la nube para mayor velocidad.",
     "addLocal": "Añadir un archivo de modelo",
     "privacyNote": "Los modelos de este equipo nunca envían tu voz ni tu texto a ninguna parte. Los modelos en la nube los envían al proveedor que elegiste, con tu clave API.",
     "inUse": "En uso",
@@ -2828,12 +2828,12 @@
     "shortcutRow": "Atajo"
   },
   "dictionary": {
-    "description": "Enseña a SpeakoFlow los nombres y términos que usas, y crea atajos que se expanden en textos más largos.",
+    "description": "Enseña a Awaz los nombres y términos que usas, y crea atajos que se expanden en textos más largos.",
     "words": {
       "title": "Tus palabras",
-      "description": "Nombres, jerga y grafías que SpeakoFlow siempre debe acertar.",
+      "description": "Nombres, jerga y grafías que Awaz siempre debe acertar.",
       "placeholder": "Añade un nombre, un término o una grafía…",
-      "empty": "Aún no hay nada. Añade las palabras que SpeakoFlow sigue escribiendo mal."
+      "empty": "Aún no hay nada. Añade las palabras que Awaz sigue escribiendo mal."
     },
     "replacements": {
       "title": "Reemplazos",
@@ -3321,11 +3321,11 @@
     "restored": "Tu configuración estaba dañada y se restauró desde una copia de seguridad.",
     "restoredDescription": "Es posible que falten tus cambios más recientes.",
     "unrecoverableTitle": "No se pudo recuperar tu configuración",
-    "unrecoverableDescription": "SpeakoFlow se inició con la configuración predeterminada. El archivo dañado se guardó como {{file}}.",
+    "unrecoverableDescription": "Awaz se inició con la configuración predeterminada. El archivo dañado se guardó como {{file}}.",
     "notSavingTitle": "Los cambios en la configuración no se guardarán",
-    "notSavingDescription": "No se pudo leer el archivo de configuración, así que se dejó intacto. Reinicia SpeakoFlow para volver a intentarlo.",
+    "notSavingDescription": "No se pudo leer el archivo de configuración, así que se dejó intacto. Reinicia Awaz para volver a intentarlo.",
     "saveFailingTitle": "La configuración no se está guardando",
-    "saveFailingDescription": "Tus cambios recientes aún no se han guardado. SpeakoFlow seguirá intentándolo.",
+    "saveFailingDescription": "Tus cambios recientes aún no se han guardado. Awaz seguirá intentándolo.",
     "dismiss": "Descartar"
   }
 }

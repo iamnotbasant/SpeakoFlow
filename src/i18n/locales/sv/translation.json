@@ -35,10 +35,10 @@
     "downloading": "Laddar ner… {{progress}}%",
     "downloadingUnknown": "Laddar ner…",
     "installing": "Installerar…",
-    "reopening": "SpeakoFlow stängs för att installera uppdateringen och öppnas igen om några sekunder.",
+    "reopening": "Awaz stängs för att installera uppdateringen och öppnas igen om några sekunder.",
     "updatedTo": "Uppdaterad till version {{version}}",
     "restart": "Starta om nu",
-    "readyToRestart": "Uppdateringen är installerad. Starta om SpeakoFlow för att börja använda den.",
+    "readyToRestart": "Uppdateringen är installerad. Starta om Awaz för att börja använda den.",
     "installFailed": "Uppdateringen installerades inte. Du kan försöka igen, eller ladda ner installationsprogrammet och köra det själv.",
     "downloadFailed": "Nedladdningen blev inte klar. Kontrollera anslutningen och försök igen.",
     "downloadInstaller": "Ladda ner installationsprogram",
@@ -49,13 +49,13 @@
     "showInFolder": "Visa i mapp",
     "viewRelease": "Visa på GitHub",
     "hint": {
-      "windows": "SpeakoFlow stängs, installerar uppdateringen och öppnas igen. Du behöver inte klicka på något mer.",
-      "macos": "SpeakoFlow startar om med den nya versionen. macOS kan be dig tillåta Mikrofon och Hjälpmedel igen efteråt.",
-      "linux": "SpeakoFlow startar om med den nya versionen. En .deb-installation ber först om ditt lösenord."
+      "windows": "Awaz stängs, installerar uppdateringen och öppnas igen. Du behöver inte klicka på något mer.",
+      "macos": "Awaz startar om med den nya versionen. macOS kan be dig tillåta Mikrofon och Hjälpmedel igen efteråt.",
+      "linux": "Awaz startar om med den nya versionen. En .deb-installation ber först om ditt lösenord."
     },
     "modes": {
       "portable": "Det här är den portabla versionen, som inte kan ersätta sig själv. Ladda ner den nya versionen och kopiera din Data-mapp till den.",
-      "packageManager": "SpeakoFlow installerades av din pakethanterare, så uppdatera den där, till exempel med yay -Syu speakoflow-bin.",
+      "packageManager": "Awaz installerades av din pakethanterare, så uppdatera den där, till exempel med yay -Syu speakoflow-bin.",
       "download": "Den här kopian kan inte uppdatera sig själv på plats. Ladda ner installationsprogrammet och kör det för att få den nya versionen."
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "Skicka feedback",
     "title": "Skicka feedback",
-    "description": "Jag läser varje meddelande själv, så skriv precis som det blir. Tack för att du hjälper till att göra SpeakoFlow bättre.",
+    "description": "Jag läser varje meddelande själv, så skriv precis som det blir. Tack för att du hjälper till att göra Awaz bättre.",
     "kind": {
       "label": "Typ av feedback",
       "bug": "Fel",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "Vad hände, och vad förväntade du dig i stället?",
-      "idea": "Vad skulle göra SpeakoFlow bättre för dig?",
+      "idea": "Vad skulle göra Awaz bättre för dig?",
       "question": "Vad vill du veta?"
     },
     "messageLabel": "Meddelande",
@@ -159,10 +159,10 @@
       "retry": "Försök igen"
     },
     "tour": {
-      "features": "Vad SpeakoFlow gör",
+      "features": "Vad Awaz gör",
       "count": "{{current}} av {{total}}",
       "next": "Nästa",
-      "finish": "Öppna SpeakoFlow",
+      "finish": "Öppna Awaz",
       "tabs": {
         "dictate": "Diktering",
         "ask": "Assistent",
@@ -240,7 +240,7 @@
       "ready": "Du är klar"
     },
     "speechToText": {
-      "title": "Hur ska SpeakoFlow höra dig?",
+      "title": "Hur ska Awaz höra dig?",
       "subtitle": "Det här förvandlar din röst till text, direkt på din dator. Välj en, byt när du vill.",
       "cards": {
         "fast": {
@@ -285,7 +285,7 @@
       "downloadStarted": "Laddar ner din modell i bakgrunden."
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "Utför talade ändringar som ”nytt stycke” och ”stryk det”. Endast engelska.",
       "pill": "Rensar din diktering",
       "recommendedForDictation": "Rekommenderas för diktering",
@@ -305,7 +305,7 @@
       "downloadingVoice": "Din röstmodell landar. {{percentage}}% klart.",
       "downloadingGeneric": "Laddar fortfarande ner. {{percentage}}% klart.",
       "signOff": "Det var allt. Säg något nu.",
-      "openApp": "Öppna SpeakoFlow"
+      "openApp": "Öppna Awaz"
     },
     "errors": {
       "selectModel": "Kunde inte välja den modellen. Försök igen.",
@@ -437,7 +437,7 @@
     },
     "permissions": {
       "title": "Behörigheter krävs",
-      "description": "SpeakoFlow behöver ett par behörigheter för att fungera korrekt.",
+      "description": "Awaz behöver ett par behörigheter för att fungera korrekt.",
       "microphone": {
         "title": "Mikrofonåtkomst",
         "description": "Krävs för att höra din röst för transkription."
@@ -447,7 +447,7 @@
         "description": "Krävs för att skriva transkriberad text i dina program.",
         "stuckHint": "Redan påslaget i Systeminställningar? Efter en uppdatering kan macOS behålla en behörighet som inte längre matchar den här versionen.",
         "reset": "Återställ behörighet",
-        "resetDone": "Slå nu på SpeakoFlow igen i Systeminställningar."
+        "resetDone": "Slå nu på Awaz igen i Systeminställningar."
       },
       "grant": "Bevilja behörighet",
       "granted": "Beviljad",
@@ -456,7 +456,7 @@
       "errors": {
         "checkFailed": "Det gick inte att kontrollera behörigheterna. Försök igen.",
         "requestFailed": "Det gick inte att begära behörighet. Försök igen.",
-        "resetFailed": "Det gick inte att återställa behörigheten. Ta bort SpeakoFlow från listan Hjälpmedel och lägg till det igen."
+        "resetFailed": "Det gick inte att återställa behörigheten. Ta bort Awaz från listan Hjälpmedel och lägg till det igen."
       }
     },
     "frame": {
@@ -752,7 +752,7 @@
         "rescanning": "Söker igen…",
         "rescanDone_one": "{{count}} lokal modell hittad.",
         "rescanDone_other": "{{count}} lokala modeller hittade.",
-        "footnote": "Länkade mappar genomsöks igen när SpeakoFlow startar, så modeller du lägger till i dem senare dyker upp av sig själva. Att ta bort länken till en mapp eller ta bort en modell tar bara bort den från den här listan — dina filer ligger kvar där de är.",
+        "footnote": "Länkade mappar genomsöks igen när Awaz startar, så modeller du lägger till i dem senare dyker upp av sig själva. Att ta bort länken till en mapp eller ta bort en modell tar bara bort den från den här listan — dina filer ligger kvar där de är.",
         "removeTitle": "Ta bort från listan?",
         "removeConfirm": "Ta bort ”{{modelName}}” från din modellista?\n\nSjälva filen ligger kvar där den är:\n{{path}}",
         "missingBadge": "Filen saknas",
@@ -853,15 +853,15 @@
       },
       "autostart": {
         "label": "Starta vid uppstart",
-        "description": "Öppna SpeakoFlow automatiskt när du loggar in."
+        "description": "Öppna Awaz automatiskt när du loggar in."
       },
       "showTrayIcon": {
         "label": "Visa ikon i systemfältet",
-        "description": "Behåll SpeakoFlow i systemfältet."
+        "description": "Behåll Awaz i systemfältet."
       },
       "closeBehavior": {
         "label": "Avsluta när jag stänger fönstret",
-        "description": "När det är av fortsätter SpeakoFlow att köras i systemfältet när du stänger fönstret, så att dina kortkommandon fortfarande fungerar. När det är på avslutas appen helt när du stänger fönstret."
+        "description": "När det är av fortsätter Awaz att köras i systemfältet när du stänger fönstret, så att dina kortkommandon fortfarande fungerar. När det är på avslutas appen helt när du stänger fönstret."
       },
       "overlayStyle": {
         "title": "Överlagring",
@@ -955,8 +955,8 @@
       },
       "customWords": {
         "title": "Anpassade ord",
-        "description": "Namn, produkter och fraser som SpeakoFlow ska stava på ditt sätt.",
-        "info": "Exempel: lägg till ”Kokoro” om SpeakoFlow skriver ”Coco row”.",
+        "description": "Namn, produkter och fraser som Awaz ska stava på ditt sätt.",
+        "info": "Exempel: lägg till ”Kokoro” om Awaz skriver ”Coco row”.",
         "placeholder": "Lägg till ett namn, en term eller en kort fras",
         "add": "Lägg till",
         "empty": "Inga anpassade ord ännu.",
@@ -965,7 +965,7 @@
       },
       "autoLearn": {
         "label": "Lär dig ord jag rättar",
-        "description": "Kommer ihåg din stavning när du rättar ett ord som SpeakoFlow uppfattade fel.",
+        "description": "Kommer ihåg din stavning när du rättar ett ord som Awaz uppfattade fel.",
         "info": "Den läser bara fältet den just skrev i, under ungefär en minut. Inget laddas upp, och varje ord den lär sig visas här.",
         "unsupported": "Att lära sig av rättningar finns än så länge bara på Windows. Du kan fortfarande lägga till ord för hand ovan.",
         "learnedTitle": "Inlärt från dina rättningar",
@@ -979,7 +979,7 @@
         "title": "Textersättningar",
         "description": "Ersätt en fras i din transkribering med text du använder ofta. Exempel: ”min e-post” blir ”alex@example.com”.",
         "rulesTitle": "Ersättningsregler",
-        "rulesHint": "Välj vad SpeakoFlow hör och vad som ska infogas.",
+        "rulesHint": "Välj vad Awaz hör och vad som ska infogas.",
         "empty": "Skapa en regel för en fras du säger ofta.",
         "addFirst": "Skapa första regeln",
         "addRule": "Lägg till ersättning",
@@ -1227,7 +1227,7 @@
         },
         "model": {
           "emptyTitle": "Ingen rensningsmodell än",
-          "emptyDescription": "SpeakoFlow Mini är en liten nedladdning byggd för just detta.",
+          "emptyDescription": "Awaz Mini är en liten nedladdning byggd för just detta.",
           "choose": "Välj en modell",
           "tunedBadge": "Trimmad för rensning"
         },
@@ -1235,7 +1235,7 @@
           "title": "Välj din rensningsmodell",
           "description": "Rensningen körs efter varje diktering, så hastighet betyder mer än storlek. Allt körs offline.",
           "recommendedTitle": "Rekommenderas för rensning",
-          "recommendedDescription": "SpeakoFlow Mini är tränad för just den här uppgiften och slår mycket större modeller på den."
+          "recommendedDescription": "Awaz Mini är tränad för just den här uppgiften och slår mycket större modeller på den."
         },
         "promptGroupTitle": "Instruktioner för rensning",
         "tunedModelNotice": "Den här modellen är finjusterad för rensning av engelsk diktering, så den fungerar bäst med den rekommenderade prompten och utan stil.",
@@ -1339,7 +1339,7 @@
       },
       "updateChecks": {
         "label": "Sök efter uppdateringar automatiskt",
-        "description": "Letar efter en ny version när SpeakoFlow startar och var 12:e timme. Du kan alltid söka manuellt."
+        "description": "Letar efter en ny version när Awaz startar och var 12:e timme. Du kan alltid söka manuellt."
       },
       "soundTheme": {
         "label": "Ljudtema",
@@ -1433,7 +1433,7 @@
       },
       "appDataDirectory": {
         "title": "Mapp för appdata",
-        "description": "Där SpeakoFlow sparar dina modeller, din historik och dina inställningar."
+        "description": "Där Awaz sparar dina modeller, din historik och dina inställningar."
       },
       "sourceCode": {
         "title": "Källkod",
@@ -1442,12 +1442,12 @@
       },
       "license": {
         "title": "Licens",
-        "description": "SpeakoFlow är öppen källkod under MIT-licensen och bygger på Handy (också MIT) av CJ Pais.",
+        "description": "Awaz är öppen källkod under MIT-licensen och bygger på Handy (också MIT) av CJ Pais.",
         "button": "Visa licensen"
       },
       "supportDevelopment": {
         "title": "Stöd utvecklingen",
-        "description": "Hjälp oss att fortsätta bygga SpeakoFlow",
+        "description": "Hjälp oss att fortsätta bygga Awaz",
         "button": "Donera"
       }
     },
@@ -1455,7 +1455,7 @@
       "enable": {
         "title": "Assistent",
         "label": "Aktivera assistenten",
-        "description": "Stäng av det här för att göra SpeakoFlow till enbart diktering. Den flytande panelen stängs och laddas aldrig, dess kortkommandon frigörs och minnet den använder lämnas tillbaka. Generera med Flow och AI-rensning fortsätter att fungera."
+        "description": "Stäng av det här för att göra Awaz till enbart diktering. Den flytande panelen stängs och laddas aldrig, dess kortkommandon frigörs och minnet den använder lämnas tillbaka. Generera med Flow och AI-rensning fortsätter att fungera."
       },
       "shortcuts": {
         "title": "Kortkommandon"
@@ -1494,7 +1494,7 @@
         "deleteModelFailed": "Kunde inte ta bort modellen.",
         "finderSectionTitle": "Fler modeller på enheten",
         "finderTitle": "Utforska Hugging Face",
-        "finderDescription": "Sök bland tusentals GGUF-modeller och ladda ner en direkt till SpeakoFlow.",
+        "finderDescription": "Sök bland tusentals GGUF-modeller och ladda ner en direkt till Awaz.",
         "finderAction": "Hitta en modell",
         "huggingFaceTitle": "Dina modeller",
         "catalogEmpty": "Inga rekommenderade lokala modeller är tillgängliga just nu."
@@ -1617,7 +1617,7 @@
           "label": "När skärmen fångas"
         },
         "screenRecording": {
-          "description": "Skärmvisning kräver behörigheten Skärminspelning i macOS. Bevilja den i Systeminställningar och starta sedan om SpeakoFlow för att den ska börja gälla.",
+          "description": "Skärmvisning kräver behörigheten Skärminspelning i macOS. Bevilja den i Systeminställningar och starta sedan om Awaz för att den ska börja gälla.",
           "grant": "Öppna systeminställningar"
         }
       },
@@ -1794,7 +1794,7 @@
         "testGpuMoved": "Grafikkortet förvrängde provet, så det tystades. Kokoro använder nu processorn, så testa igen för att höra det.",
         "testGpuForced": "Grafikkortet förvrängde provet, så det tystades. Ställ in Körs på till Automatiskt eller Processor.",
         "testGpuSuspect": "Provet blev förvrängt, så det tystades. Testa igen för att kontrollera grafikkortet.",
-        "testPhrase": "Hej! Det här är ett test av SpeakoFlows röstuppläsning.",
+        "testPhrase": "Hej! Det här är ett test av Awazs röstuppläsning.",
         "downloadStart": "Laddar ner Kokoro-rösten…",
         "downloadProgress": "Laddar ner Kokoro-rösten… {{progress}}%",
         "downloadReady": "Kokoro-rösten är klar ✓",
@@ -1981,7 +1981,7 @@
     "list": {
       "title": "Inspelade möten",
       "emptyTitle": "Inga möten än",
-      "emptyHint": "Starta inspelningen före ett samtal så sparar SpeakoFlow transkriptionen, uppdelad efter vem som pratade.",
+      "emptyHint": "Starta inspelningen före ett samtal så sparar Awaz transkriptionen, uppdelad efter vem som pratade.",
       "loadMore": "Ladda fler",
       "speakers_one": "{{count}} talare",
       "speakers_other": "{{count}} talare",
@@ -2143,7 +2143,7 @@
   },
   "accessibility": {
     "permissionsRequired": "Behörigheter för hjälpmedel krävs",
-    "permissionsDescription": "SpeakoFlow behöver behörighet för hjälpmedel för att kunna skriva transkriberad text.",
+    "permissionsDescription": "Awaz behöver behörighet för hjälpmedel för att kunna skriva transkriberad text.",
     "openSettings": "Öppna systeminställningar",
     "dismiss": "Avvisa"
   },
@@ -2172,7 +2172,7 @@
   },
   "appLanguage": {
     "title": "Appens språk",
-    "description": "Ändra språket i SpeakoFlow-gränssnittet"
+    "description": "Ändra språket i Awaz-gränssnittet"
   },
   "overlay": {
     "preparing": "Förbereder mikrofonen…",
@@ -2523,7 +2523,7 @@
       "performance": "Prestanda"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "Version {{version}}",
       "project": "Projekt",
       "docs": "Dokumentation",
@@ -2541,7 +2541,7 @@
     "subtitleTap": "Tryck på ditt kortkommando i valfri app, prata och tryck igen. Dina ord visas där markören är.",
     "needsModel": {
       "title": "Välj en talmodell för att börja diktera.",
-      "description": "SpeakoFlow behöver en modell för tal till text innan den kan skriva det du säger.",
+      "description": "Awaz behöver en modell för tal till text innan den kan skriva det du säger.",
       "action": "Välj en modell"
     },
     "stats": {
@@ -2616,8 +2616,8 @@
         "open": "Tangentbordsinställningar"
       },
       "linux": {
-        "wayland": "Under Wayland skickar skrivbordet bara de här tangenterna till SpeakoFlow medan något av dess fönster ligger överst. Lägg till dem som kortkommandon i systeminställningarna för att använda dem i alla appar.",
-        "noAccess": "SpeakoFlow Keys kan inte läsa tangentbordet på den här datorn, så de här kortkommandona gör inget än.",
+        "wayland": "Under Wayland skickar skrivbordet bara de här tangenterna till Awaz medan något av dess fönster ligger överst. Lägg till dem som kortkommandon i systeminställningarna för att använda dem i alla appar.",
+        "noAccess": "Awaz Keys kan inte läsa tangentbordet på den här datorn, så de här kortkommandona gör inget än.",
         "setUp": "Ställ in",
         "where": {
           "gnome": "Öppna Inställningar → Tangentbord → Visa och anpassa kortkommandon → Anpassade kortkommandon, lägg till ett för varje kommando nedan och tryck på de tangenter du vill ha.",
@@ -2625,7 +2625,7 @@
           "other": "Lägg till ett eget kortkommando i skrivbordets tangentbordsinställningar, eller en bind-rad i kompositorns konfiguration, för varje kommando nedan."
         },
         "tapOnly": "Ett kortkommando som läggs till så fungerar som ”Tryck för att växla”: tryck en gång för att starta och en gång till för att stoppa.",
-        "access": "Eller låt SpeakoFlow Keys läsa tangentbordet. Kör det här i en terminal och logga sedan ut och in igen:",
+        "access": "Eller låt Awaz Keys läsa tangentbordet. Kör det här i en terminal och logga sedan ut och in igen:",
         "copy": "Kopiera",
         "copied": "Kopierat"
       }
@@ -2655,7 +2655,7 @@
     }
   },
   "modelsHub": {
-    "description": "Varje uppgift i SpeakoFlow utförs av en modell du väljer. Kör den på den här datorn för integritet, eller i molnet för hastighet.",
+    "description": "Varje uppgift i Awaz utförs av en modell du väljer. Kör den på den här datorn för integritet, eller i molnet för hastighet.",
     "addLocal": "Lägg till en modellfil",
     "privacyNote": "Modeller på den här datorn skickar aldrig din röst eller text någonstans. Molnmodeller skickar den till leverantören du valt, med din API-nyckel.",
     "inUse": "Används",
@@ -2805,12 +2805,12 @@
     "shortcutRow": "Kortkommando"
   },
   "dictionary": {
-    "description": "Lär SpeakoFlow de namn och termer du använder, och skapa förkortningar som expanderar till längre text.",
+    "description": "Lär Awaz de namn och termer du använder, och skapa förkortningar som expanderar till längre text.",
     "words": {
       "title": "Dina ord",
-      "description": "Namn, fackuttryck och stavningar som SpeakoFlow alltid ska få rätt.",
+      "description": "Namn, fackuttryck och stavningar som Awaz alltid ska få rätt.",
       "placeholder": "Lägg till ett namn, en term eller en stavning…",
-      "empty": "Inget här än. Lägg till orden som SpeakoFlow fortsätter att få fel."
+      "empty": "Inget här än. Lägg till orden som Awaz fortsätter att få fel."
     },
     "replacements": {
       "title": "Ersättningar",
@@ -3287,11 +3287,11 @@
     "restored": "Dina inställningar var skadade och har återställts från en säkerhetskopia.",
     "restoredDescription": "De senaste ändringarna kan saknas.",
     "unrecoverableTitle": "Det gick inte att återställa dina inställningar",
-    "unrecoverableDescription": "SpeakoFlow startade med standardinställningarna. Den skadade filen sparades som {{file}}.",
+    "unrecoverableDescription": "Awaz startade med standardinställningarna. Den skadade filen sparades som {{file}}.",
     "notSavingTitle": "Ändringar i inställningarna sparas inte",
-    "notSavingDescription": "Inställningsfilen kunde inte läsas och har därför lämnats orörd. Starta om SpeakoFlow för att försöka igen.",
+    "notSavingDescription": "Inställningsfilen kunde inte läsas och har därför lämnats orörd. Starta om Awaz för att försöka igen.",
     "saveFailingTitle": "Inställningarna sparas inte",
-    "saveFailingDescription": "Dina senaste ändringar har inte sparats än. SpeakoFlow fortsätter att försöka.",
+    "saveFailingDescription": "Dina senaste ändringar har inte sparats än. Awaz fortsätter att försöka.",
     "dismiss": "Stäng"
   }
 }

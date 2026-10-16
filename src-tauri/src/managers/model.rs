@@ -2981,7 +2981,7 @@ id: "gemma-3-4b".to_string(),
         let found = scan_folder(&root, &skip_dirs).len();
         if found == 0 {
             return Err(anyhow::anyhow!(
-                "No models found in that folder. SpeakoFlow looks for .gguf and Whisper .bin files."
+                "No models found in that folder. Awaz looks for .gguf and Whisper .bin files."
             ));
         }
 

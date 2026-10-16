@@ -35,10 +35,10 @@
     "downloading": "下載中… {{progress}}%",
     "downloadingUnknown": "下載中…",
     "installing": "安裝中…",
-    "reopening": "SpeakoFlow 將關閉以安裝更新，幾秒後會重新開啟。",
+    "reopening": "Awaz 將關閉以安裝更新，幾秒後會重新開啟。",
     "updatedTo": "已更新至版本 {{version}}",
     "restart": "立即重新啟動",
-    "readyToRestart": "更新已安裝。重新啟動 SpeakoFlow 即可開始使用。",
+    "readyToRestart": "更新已安裝。重新啟動 Awaz 即可開始使用。",
     "installFailed": "更新未能安裝。您可以再試一次，或下載安裝程式自行執行。",
     "downloadFailed": "下載未完成。請確認網路連線後再試一次。",
     "downloadInstaller": "下載安裝程式",
@@ -49,13 +49,13 @@
     "showInFolder": "在資料夾中顯示",
     "viewRelease": "在 GitHub 上查看",
     "hint": {
-      "windows": "SpeakoFlow 會關閉、安裝更新，然後重新開啟。您不需要再點任何按鈕。",
-      "macos": "SpeakoFlow 會以新版本重新啟動。之後 macOS 可能會再次要求您允許麥克風與輔助使用權限。",
-      "linux": "SpeakoFlow 會以新版本重新啟動。若是以 .deb 安裝，會先要求輸入您的密碼。"
+      "windows": "Awaz 會關閉、安裝更新，然後重新開啟。您不需要再點任何按鈕。",
+      "macos": "Awaz 會以新版本重新啟動。之後 macOS 可能會再次要求您允許麥克風與輔助使用權限。",
+      "linux": "Awaz 會以新版本重新啟動。若是以 .deb 安裝，會先要求輸入您的密碼。"
     },
     "modes": {
       "portable": "這是免安裝版，無法自行更新。請下載新版本，再將您的 Data 資料夾複製過去。",
-      "packageManager": "SpeakoFlow 是由您的套件管理工具安裝的，請透過它更新，例如執行 yay -Syu speakoflow-bin。",
+      "packageManager": "Awaz 是由您的套件管理工具安裝的，請透過它更新，例如執行 yay -Syu speakoflow-bin。",
       "download": "這個版本無法直接自行更新。請下載安裝程式並執行，以取得新版本。"
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "傳送意見回饋",
     "title": "傳送意見回饋",
-    "description": "每則訊息我都會親自閱讀，想到什麼就說什麼吧。感謝您協助讓 SpeakoFlow 變得更好。",
+    "description": "每則訊息我都會親自閱讀，想到什麼就說什麼吧。感謝您協助讓 Awaz 變得更好。",
     "kind": {
       "label": "回饋類型",
       "bug": "錯誤",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "發生了什麼事？您原本預期會怎樣？",
-      "idea": "怎樣能讓 SpeakoFlow 更符合您的需要？",
+      "idea": "怎樣能讓 Awaz 更符合您的需要？",
       "question": "您想了解什麼？"
     },
     "messageLabel": "訊息",
@@ -158,10 +158,10 @@
       "retry": "再試一次"
     },
     "tour": {
-      "features": "SpeakoFlow 能做什麼",
+      "features": "Awaz 能做什麼",
       "count": "{{current}} / {{total}}",
       "next": "下一步",
-      "finish": "開啟 SpeakoFlow",
+      "finish": "開啟 Awaz",
       "tabs": {
         "dictate": "語音輸入",
         "ask": "助理",
@@ -239,7 +239,7 @@
       "ready": "準備完成"
     },
     "speechToText": {
-      "title": "SpeakoFlow 該怎麼聽您說話？",
+      "title": "Awaz 該怎麼聽您說話？",
       "subtitle": "這會直接在您的裝置上把語音變成文字。先選一個，隨時可以更換。",
       "cards": {
         "fast": {
@@ -284,7 +284,7 @@
       "downloadStarted": "正在背景下載您的模型。"
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "會套用口說指令，例如「new paragraph」與「scratch that」。僅支援英文。",
       "pill": "整理您的語音輸入",
       "recommendedForDictation": "推薦用於語音輸入",
@@ -304,7 +304,7 @@
       "downloadingVoice": "您的語音模型即將就緒，已完成 {{percentage}}%。",
       "downloadingGeneric": "仍在下載，已完成 {{percentage}}%。",
       "signOff": "就是這樣。去說點什麼吧。",
-      "openApp": "開啟 SpeakoFlow"
+      "openApp": "開啟 Awaz"
     },
     "errors": {
       "selectModel": "無法選擇該模型，請重試。",
@@ -436,7 +436,7 @@
     },
     "permissions": {
       "title": "需要權限",
-      "description": "SpeakoFlow 需要一些權限才能正常運作",
+      "description": "Awaz 需要一些權限才能正常運作",
       "microphone": {
         "title": "麥克風存取權",
         "description": "需要聽取您的語音進行轉錄"
@@ -446,7 +446,7 @@
         "description": "需要將轉錄文字輸入到您的應用程式中",
         "stuckHint": "已在「系統設定」中開啟？更新後，macOS 可能會保留一個與此版本不再相符的權限。",
         "reset": "重設權限",
-        "resetDone": "現在請在「系統設定」中重新開啟 SpeakoFlow。"
+        "resetDone": "現在請在「系統設定」中重新開啟 Awaz。"
       },
       "grant": "授予權限",
       "granted": "已授予",
@@ -455,7 +455,7 @@
       "errors": {
         "checkFailed": "無法檢查權限，請再試一次。",
         "requestFailed": "無法請求權限，請再試一次。",
-        "resetFailed": "無法重設權限。請從「輔助使用」列表中移除 SpeakoFlow，再重新加入。"
+        "resetFailed": "無法重設權限。請從「輔助使用」列表中移除 Awaz，再重新加入。"
       }
     },
     "frame": {
@@ -746,7 +746,7 @@
         "rescan": "重新掃描",
         "rescanning": "正在重新掃描…",
         "rescanDone_other": "找到 {{count}} 個本機模型。",
-        "footnote": "SpeakoFlow 啟動時會重新掃描已連結的資料夾，因此你之後放進去的模型會自動出現。取消連結資料夾或移除模型，只會從這份清單中移除——你的檔案會留在原處。",
+        "footnote": "Awaz 啟動時會重新掃描已連結的資料夾，因此你之後放進去的模型會自動出現。取消連結資料夾或移除模型，只會從這份清單中移除——你的檔案會留在原處。",
         "removeTitle": "要從清單中移除嗎？",
         "removeConfirm": "要從模型清單中移除「{{modelName}}」嗎？\n\n檔案本身會留在原處：\n{{path}}",
         "missingBadge": "檔案遺失",
@@ -847,15 +847,15 @@
       },
       "autostart": {
         "label": "開機時啟動",
-        "description": "登入時自動開啟 SpeakoFlow。"
+        "description": "登入時自動開啟 Awaz。"
       },
       "showTrayIcon": {
         "label": "顯示系統匣圖示",
-        "description": "將 SpeakoFlow 保留在系統匣中。"
+        "description": "將 Awaz 保留在系統匣中。"
       },
       "closeBehavior": {
         "label": "關閉視窗時結束程式",
-        "description": "關閉此選項時，關閉視窗後 SpeakoFlow 會繼續在系統匣中執行，快捷鍵仍可使用。開啟時，關閉視窗會完全結束應用程式。"
+        "description": "關閉此選項時，關閉視窗後 Awaz 會繼續在系統匣中執行，快捷鍵仍可使用。開啟時，關閉視窗會完全結束應用程式。"
       },
       "overlayStyle": {
         "title": "懸浮窗",
@@ -949,8 +949,8 @@
       },
       "customWords": {
         "title": "自訂詞彙",
-        "description": "希望 SpeakoFlow 依照您的寫法拼寫的名稱、產品與詞句。",
-        "info": "範例：如果 SpeakoFlow 寫成「Coco row」，請新增「Kokoro」。",
+        "description": "希望 Awaz 依照您的寫法拼寫的名稱、產品與詞句。",
+        "info": "範例：如果 Awaz 寫成「Coco row」，請新增「Kokoro」。",
         "placeholder": "新增名稱、術語或短句",
         "add": "新增",
         "empty": "還沒有自訂詞彙。",
@@ -959,7 +959,7 @@
       },
       "autoLearn": {
         "label": "學習我修正的字詞",
-        "description": "當您修正 SpeakoFlow 聽錯的字詞時，記住您的寫法。",
+        "description": "當您修正 Awaz 聽錯的字詞時，記住您的寫法。",
         "info": "它只會讀取剛輸入文字的那個欄位，時間約一分鐘。不會上傳任何內容，學到的每個字詞都會列在這裡。",
         "unsupported": "目前只有 Windows 支援從修正中學習。您仍可在上方手動新增字詞。",
         "learnedTitle": "從您的修正中學到的字詞",
@@ -973,7 +973,7 @@
         "title": "文字替換",
         "description": "將轉錄結果中的某段語句替換成您常用的文字。範例：「我的信箱」會變成「alex@example.com」。",
         "rulesTitle": "替換規則",
-        "rulesHint": "設定 SpeakoFlow 聽到什麼，以及應該插入什麼。",
+        "rulesHint": "設定 Awaz 聽到什麼，以及應該插入什麼。",
         "empty": "為您常說的語句建立一條規則。",
         "addFirst": "建立第一條規則",
         "addRule": "新增替換",
@@ -1221,7 +1221,7 @@
         },
         "model": {
           "emptyTitle": "還沒有整理模型",
-          "emptyDescription": "SpeakoFlow Mini 是專為此打造的小型下載。",
+          "emptyDescription": "Awaz Mini 是專為此打造的小型下載。",
           "choose": "選擇模型",
           "tunedBadge": "專為整理調校"
         },
@@ -1229,7 +1229,7 @@
           "title": "選擇您的整理模型",
           "description": "每次語音輸入後都會執行整理，因此速度比大小更重要。全部離線執行。",
           "recommendedTitle": "推薦用於整理",
-          "recommendedDescription": "SpeakoFlow Mini 專為這一件事訓練，在這方面勝過大得多的模型。"
+          "recommendedDescription": "Awaz Mini 專為這一件事訓練，在這方面勝過大得多的模型。"
         },
         "promptGroupTitle": "整理指令",
         "tunedModelNotice": "此模型針對英文語音輸入整理做過微調，因此搭配推薦的提示詞、不設文字風格時效果最好。",
@@ -1332,7 +1332,7 @@
       },
       "updateChecks": {
         "label": "自動檢查更新",
-        "description": "在 SpeakoFlow 啟動時及每 12 小時檢查一次新版本。您隨時都可以手動檢查。"
+        "description": "在 Awaz 啟動時及每 12 小時檢查一次新版本。您隨時都可以手動檢查。"
       },
       "soundTheme": {
         "label": "音效主題",
@@ -1424,7 +1424,7 @@
       },
       "appDataDirectory": {
         "title": "應用程式資料資料夾",
-        "description": "SpeakoFlow 存放模型、歷史紀錄與設定的位置。"
+        "description": "Awaz 存放模型、歷史紀錄與設定的位置。"
       },
       "sourceCode": {
         "title": "原始碼",
@@ -1433,12 +1433,12 @@
       },
       "license": {
         "title": "授權",
-        "description": "SpeakoFlow 以 MIT 授權開放原始碼，並以 CJ Pais 的 Handy（同為 MIT 授權）為基礎。",
+        "description": "Awaz 以 MIT 授權開放原始碼，並以 CJ Pais 的 Handy（同為 MIT 授權）為基礎。",
         "button": "檢視授權"
       },
       "supportDevelopment": {
         "title": "支持開發",
-        "description": "幫助我們持續打造 SpeakoFlow",
+        "description": "幫助我們持續打造 Awaz",
         "button": "捐贈"
       }
     },
@@ -1446,7 +1446,7 @@
       "enable": {
         "title": "助理",
         "label": "啟用助理",
-        "description": "關閉後，SpeakoFlow 只做語音輸入。浮動面板會關閉且不再載入，它的快捷鍵會釋放，佔用的記憶體也會歸還。使用 Flow 生成 與 AI 整理仍可正常使用。"
+        "description": "關閉後，Awaz 只做語音輸入。浮動面板會關閉且不再載入，它的快捷鍵會釋放，佔用的記憶體也會歸還。使用 Flow 生成 與 AI 整理仍可正常使用。"
       },
       "shortcuts": {
         "title": "快捷鍵"
@@ -1485,7 +1485,7 @@
         "deleteModelFailed": "無法刪除模型。",
         "finderSectionTitle": "更多裝置端模型",
         "finderTitle": "瀏覽 Hugging Face",
-        "finderDescription": "搜尋數千個 GGUF 模型，直接下載到 SpeakoFlow。",
+        "finderDescription": "搜尋數千個 GGUF 模型，直接下載到 Awaz。",
         "finderAction": "尋找模型",
         "huggingFaceTitle": "我的模型",
         "catalogEmpty": "目前沒有可用的推薦本機模型。"
@@ -1608,7 +1608,7 @@
           "label": "擷取時機"
         },
         "screenRecording": {
-          "description": "螢幕視覺需要 macOS 的「螢幕錄製」權限。請在「系統設定」中授予權限，然後重新啟動 SpeakoFlow 才會生效。",
+          "description": "螢幕視覺需要 macOS 的「螢幕錄製」權限。請在「系統設定」中授予權限，然後重新啟動 Awaz 才會生效。",
           "grant": "開啟系統設定"
         }
       },
@@ -1785,7 +1785,7 @@
         "testGpuMoved": "您的顯示卡讓試聽音訊出現雜音，因此已將其靜音。Kokoro 現在改用處理器，請再測試一次來試聽。",
         "testGpuForced": "您的顯示卡讓試聽音訊出現雜音，因此已將其靜音。請將「執行於」設為「自動」或「處理器」。",
         "testGpuSuspect": "試聽音訊出現雜音，因此已將其靜音。請再測試一次，以檢查您的顯示卡。",
-        "testPhrase": "您好！這是 SpeakoFlow 語音輸出的測試。",
+        "testPhrase": "您好！這是 Awaz 語音輸出的測試。",
         "downloadStart": "正在下載 Kokoro 語音…",
         "downloadProgress": "正在下載 Kokoro 語音… {{progress}}%",
         "downloadReady": "Kokoro 語音已就緒 ✓",
@@ -1972,7 +1972,7 @@
     "list": {
       "title": "已錄製的會議",
       "emptyTitle": "還沒有會議",
-      "emptyHint": "在通話前開始錄製，SpeakoFlow 就會保留依說話者分段的逐字稿。",
+      "emptyHint": "在通話前開始錄製，Awaz 就會保留依說話者分段的逐字稿。",
       "loadMore": "載入更多",
       "speakers_other": "{{count}} 位說話者",
       "hasNotes": "已產生筆記"
@@ -2131,7 +2131,7 @@
   },
   "accessibility": {
     "permissionsRequired": "需要輔助使用權限",
-    "permissionsDescription": "SpeakoFlow 需要輔助使用權限才能輸入轉錄的文字",
+    "permissionsDescription": "Awaz 需要輔助使用權限才能輸入轉錄的文字",
     "openSettings": "開啟系統設定",
     "dismiss": "關閉"
   },
@@ -2160,7 +2160,7 @@
   },
   "appLanguage": {
     "title": "應用程式語言",
-    "description": "變更 SpeakoFlow 介面的語言"
+    "description": "變更 Awaz 介面的語言"
   },
   "overlay": {
     "preparing": "正在準備麥克風…",
@@ -2505,7 +2505,7 @@
       "performance": "效能"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "版本 {{version}}",
       "project": "專案",
       "docs": "說明文件",
@@ -2523,7 +2523,7 @@
     "subtitleTap": "在任何應用程式中按一下快捷鍵、說話，再按一下。您說的話會出現在游標所在位置。",
     "needsModel": {
       "title": "選擇語音模型，開始語音輸入。",
-      "description": "SpeakoFlow 需要一個語音轉文字模型，才能輸入您說的話。",
+      "description": "Awaz 需要一個語音轉文字模型，才能輸入您說的話。",
       "action": "選擇模型"
     },
     "stats": {
@@ -2595,8 +2595,8 @@
         "open": "鍵盤設定"
       },
       "linux": {
-        "wayland": "在 Wayland 下，只有 SpeakoFlow 的視窗在最前面時，桌面才會把這些按鍵交給 SpeakoFlow。若要在任何應用程式中使用，請在系統設定中將它們新增為快捷鍵。",
-        "noAccess": "SpeakoFlow Keys 無法在這台電腦上讀取鍵盤，因此這些快捷鍵暫時沒有作用。",
+        "wayland": "在 Wayland 下，只有 Awaz 的視窗在最前面時，桌面才會把這些按鍵交給 Awaz。若要在任何應用程式中使用，請在系統設定中將它們新增為快捷鍵。",
+        "noAccess": "Awaz Keys 無法在這台電腦上讀取鍵盤，因此這些快捷鍵暫時沒有作用。",
         "setUp": "設定",
         "where": {
           "gnome": "開啟「設定 → 鍵盤 → 檢視及自訂快捷鍵 → 自訂快捷鍵」，為下方每個指令各新增一個，然後按下想用的按鍵。",
@@ -2604,7 +2604,7 @@
           "other": "請為下方每個指令，在桌面的鍵盤設定中新增自訂快捷鍵，或在合成器設定中加入一行 bind。"
         },
         "tapOnly": "以這種方式新增的快捷鍵和「按一下切換」一樣：按一次開始，再按一次停止。",
-        "access": "或者允許 SpeakoFlow Keys 讀取鍵盤。在終端機中執行以下指令，然後登出再重新登入：",
+        "access": "或者允許 Awaz Keys 讀取鍵盤。在終端機中執行以下指令，然後登出再重新登入：",
         "copy": "複製",
         "copied": "已複製"
       }
@@ -2632,7 +2632,7 @@
     }
   },
   "modelsHub": {
-    "description": "SpeakoFlow 的每項工作都由您選擇的模型完成。在這台電腦上執行可保護隱私，在雲端執行則速度更快。",
+    "description": "Awaz 的每項工作都由您選擇的模型完成。在這台電腦上執行可保護隱私，在雲端執行則速度更快。",
     "addLocal": "新增模型檔案",
     "privacyNote": "在這台電腦上執行的模型，絕不會將您的語音或文字傳送到任何地方。雲端模型則會使用您的 API 金鑰，將內容傳送給您選擇的供應商。",
     "inUse": "使用中",
@@ -2782,12 +2782,12 @@
     "shortcutRow": "快捷鍵"
   },
   "dictionary": {
-    "description": "教 SpeakoFlow 認識您常用的名稱與術語，並設定可展開成較長文字的縮寫。",
+    "description": "教 Awaz 認識您常用的名稱與術語，並設定可展開成較長文字的縮寫。",
     "words": {
       "title": "您的詞彙",
-      "description": "SpeakoFlow 應該永遠寫對的名稱、專業術語與拼寫。",
+      "description": "Awaz 應該永遠寫對的名稱、專業術語與拼寫。",
       "placeholder": "新增名稱、術語或拼寫…",
-      "empty": "這裡還沒有內容。請新增 SpeakoFlow 老是寫錯的詞彙。"
+      "empty": "這裡還沒有內容。請新增 Awaz 老是寫錯的詞彙。"
     },
     "replacements": {
       "title": "文字替換",
@@ -3253,11 +3253,11 @@
     "restored": "你的設定已損毀，已從備份還原。",
     "restoredDescription": "最近的變更可能遺失。",
     "unrecoverableTitle": "無法還原你的設定",
-    "unrecoverableDescription": "SpeakoFlow 已使用預設設定啟動。損毀的檔案已保留為 {{file}}。",
+    "unrecoverableDescription": "Awaz 已使用預設設定啟動。損毀的檔案已保留為 {{file}}。",
     "notSavingTitle": "設定變更將不會儲存",
-    "notSavingDescription": "無法讀取設定檔，因此未做任何變動。請重新啟動 SpeakoFlow 再試一次。",
+    "notSavingDescription": "無法讀取設定檔，因此未做任何變動。請重新啟動 Awaz 再試一次。",
     "saveFailingTitle": "設定未能儲存",
-    "saveFailingDescription": "最近的變更尚未儲存。SpeakoFlow 會繼續嘗試。",
+    "saveFailingDescription": "最近的變更尚未儲存。Awaz 會繼續嘗試。",
     "dismiss": "關閉"
   }
 }

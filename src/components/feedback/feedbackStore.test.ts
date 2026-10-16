@@ -71,5 +71,5 @@ test("describeSystem is one readable line", () => {
       arch: "x86_64",
       install: "nsis",
     }),
-  ).toBe("SpeakoFlow 1.5.0 · Windows 10.0.26100 · x86_64 · nsis");
+  ).toBe("Awaz 1.5.0 · Windows 10.0.26100 · x86_64 · nsis");
 });

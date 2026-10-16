@@ -73,7 +73,7 @@ export function looksLikeEmail(email: string): boolean {
 
 /** One line for the "Include app version and system" checkbox. */
 export const describeSystem = (info: FeedbackSystemInfo) =>
-  `SpeakoFlow ${info.app_version} · ${info.os} · ${info.arch} · ${info.install}`;
+  `Awaz ${info.app_version} · ${info.os} · ${info.arch} · ${info.install}`;
 
 // ── Draft ────────────────────────────────────────────────────────────────
 // Closing the dialog, a failed send, or an app restart must not throw away a

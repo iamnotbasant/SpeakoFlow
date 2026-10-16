@@ -35,10 +35,10 @@
     "downloading": "İndiriliyor… %{{progress}}",
     "downloadingUnknown": "İndiriliyor…",
     "installing": "Yükleniyor…",
-    "reopening": "SpeakoFlow güncellemeyi yüklemek için kapanacak ve birkaç saniye içinde yeniden açılacak.",
+    "reopening": "Awaz güncellemeyi yüklemek için kapanacak ve birkaç saniye içinde yeniden açılacak.",
     "updatedTo": "{{version}} sürümüne güncellendi",
     "restart": "Şimdi yeniden başlat",
-    "readyToRestart": "Güncelleme yüklendi. Kullanmaya başlamak için SpeakoFlow'u yeniden başlatın.",
+    "readyToRestart": "Güncelleme yüklendi. Kullanmaya başlamak için Awaz'u yeniden başlatın.",
     "installFailed": "Güncelleme yüklenemedi. Tekrar deneyebilir ya da yükleyiciyi indirip kendiniz çalıştırabilirsiniz.",
     "downloadFailed": "İndirme tamamlanmadı. Bağlantınızı kontrol edip tekrar deneyin.",
     "downloadInstaller": "Yükleyiciyi indir",
@@ -49,13 +49,13 @@
     "showInFolder": "Klasörde göster",
     "viewRelease": "GitHub'da görüntüle",
     "hint": {
-      "windows": "SpeakoFlow kapanır, güncellemeyi yükler ve yeniden açılır. Başka bir şeye tıklamanız gerekmez.",
-      "macos": "SpeakoFlow yeni sürümle yeniden başlar. macOS ardından Mikrofon ve Erişilebilirlik izinlerini yeniden vermenizi isteyebilir.",
-      "linux": "SpeakoFlow yeni sürümle yeniden başlar. .deb kurulumu önce parolanızı sorar."
+      "windows": "Awaz kapanır, güncellemeyi yükler ve yeniden açılır. Başka bir şeye tıklamanız gerekmez.",
+      "macos": "Awaz yeni sürümle yeniden başlar. macOS ardından Mikrofon ve Erişilebilirlik izinlerini yeniden vermenizi isteyebilir.",
+      "linux": "Awaz yeni sürümle yeniden başlar. .deb kurulumu önce parolanızı sorar."
     },
     "modes": {
       "portable": "Bu, kendini değiştiremeyen taşınabilir sürümdür. Yeni sürümü indirin ve Data klasörünüzü içine kopyalayın.",
-      "packageManager": "SpeakoFlow'u paket yöneticiniz yükledi, bu yüzden oradan güncelleyin; örneğin yay -Syu speakoflow-bin ile.",
+      "packageManager": "Awaz'u paket yöneticiniz yükledi, bu yüzden oradan güncelleyin; örneğin yay -Syu speakoflow-bin ile.",
       "download": "Bu kopya kendini yerinde güncelleyemez. Yeni sürümü almak için yükleyiciyi indirip çalıştırın."
     },
     "pill": {
@@ -70,7 +70,7 @@
   "feedback": {
     "button": "Geri bildirim gönder",
     "title": "Geri bildirim gönder",
-    "description": "Her mesajı kendim okuyorum, o yüzden aklınıza nasıl geliyorsa öyle yazın. SpeakoFlow'u daha iyi hâle getirmeye yardım ettiğiniz için teşekkürler.",
+    "description": "Her mesajı kendim okuyorum, o yüzden aklınıza nasıl geliyorsa öyle yazın. Awaz'u daha iyi hâle getirmeye yardım ettiğiniz için teşekkürler.",
     "kind": {
       "label": "Geri bildirim türü",
       "bug": "Hata",
@@ -79,7 +79,7 @@
     },
     "placeholder": {
       "bug": "Ne oldu ve bunun yerine ne bekliyordunuz?",
-      "idea": "SpeakoFlow'u sizin için ne daha iyi yapardı?",
+      "idea": "Awaz'u sizin için ne daha iyi yapardı?",
       "question": "Ne öğrenmek istersiniz?"
     },
     "messageLabel": "Mesaj",
@@ -159,10 +159,10 @@
       "retry": "Tekrar dene"
     },
     "tour": {
-      "features": "SpeakoFlow neler yapar",
+      "features": "Awaz neler yapar",
       "count": "{{current}}/{{total}}",
       "next": "İleri",
-      "finish": "SpeakoFlow'u aç",
+      "finish": "Awaz'u aç",
       "tabs": {
         "dictate": "Dikte",
         "ask": "Asistan",
@@ -240,7 +240,7 @@
       "ready": "Hazırsınız"
     },
     "speechToText": {
-      "title": "SpeakoFlow sizi nasıl duysun?",
+      "title": "Awaz sizi nasıl duysun?",
       "subtitle": "Bu, sesinizi doğrudan makinenizde metne dönüştürür. Birini seçin, istediğiniz zaman değiştirin.",
       "cards": {
         "fast": {
@@ -285,7 +285,7 @@
       "downloadStarted": "Modeliniz arka planda indiriliyor."
     },
     "cleanup": {
-      "cardTitle": "SpeakoFlow Mini",
+      "cardTitle": "Awaz Mini",
       "cardDescription": "“yeni paragraf” ve “onu sil” gibi sözlü düzenlemeleri uygular. Yalnızca İngilizce.",
       "pill": "Diktenizi temizler",
       "recommendedForDictation": "Dikte için önerilir",
@@ -305,7 +305,7 @@
       "downloadingVoice": "Ses modeliniz iniyor. %{{percentage}} tamamlandı.",
       "downloadingGeneric": "İndirme sürüyor. %{{percentage}} tamamlandı.",
       "signOff": "Hepsi bu. Hadi bir şeyler söyleyin.",
-      "openApp": "SpeakoFlow'u aç"
+      "openApp": "Awaz'u aç"
     },
     "errors": {
       "selectModel": "Bu model seçilemedi. Lütfen tekrar deneyin.",
@@ -437,7 +437,7 @@
     },
     "permissions": {
       "title": "İzinler gerekli",
-      "description": "SpeakoFlow'nin düzgün çalışabilmesi için birkaç izne ihtiyacı var.",
+      "description": "Awaz'nin düzgün çalışabilmesi için birkaç izne ihtiyacı var.",
       "microphone": {
         "title": "Mikrofon erişimi",
         "description": "Sesinizi transkripsiyon için alabilmek için gereklidir."
@@ -447,7 +447,7 @@
         "description": "Transkribe edilen metni uygulamalarınıza yazabilmek için gereklidir.",
         "stuckHint": "Sistem Ayarları'nda zaten açık mı? Bir güncellemeden sonra macOS, bu sürümle artık eşleşmeyen bir izni tutabilir.",
         "reset": "İzni sıfırla",
-        "resetDone": "Şimdi Sistem Ayarları'nda SpeakoFlow'u yeniden açın."
+        "resetDone": "Şimdi Sistem Ayarları'nda Awaz'u yeniden açın."
       },
       "grant": "İzin ver",
       "granted": "Verildi",
@@ -456,7 +456,7 @@
       "errors": {
         "checkFailed": "İzinler kontrol edilemedi. Lütfen tekrar deneyin.",
         "requestFailed": "İzin istenemedi. Lütfen tekrar deneyin.",
-        "resetFailed": "İzin sıfırlanamadı. SpeakoFlow'u Erişilebilirlik listesinden kaldırıp yeniden ekleyin."
+        "resetFailed": "İzin sıfırlanamadı. Awaz'u Erişilebilirlik listesinden kaldırıp yeniden ekleyin."
       }
     },
     "frame": {
@@ -752,7 +752,7 @@
         "rescanning": "Yeniden taranıyor…",
         "rescanDone_one": "{{count}} yerel model bulundu.",
         "rescanDone_other": "{{count}} yerel model bulundu.",
-        "footnote": "Bağlı klasörler SpeakoFlow her açıldığında yeniden taranır; bu yüzden sonradan eklediğiniz modeller kendiliğinden görünür. Bir klasörün bağlantısını kaldırmak veya bir modeli kaldırmak onu yalnızca bu listeden siler — dosyalarınız olduğu yerde kalır.",
+        "footnote": "Bağlı klasörler Awaz her açıldığında yeniden taranır; bu yüzden sonradan eklediğiniz modeller kendiliğinden görünür. Bir klasörün bağlantısını kaldırmak veya bir modeli kaldırmak onu yalnızca bu listeden siler — dosyalarınız olduğu yerde kalır.",
         "removeTitle": "Listeden kaldırılsın mı?",
         "removeConfirm": "“{{modelName}}” model listenizden kaldırılsın mı?\n\nDosyanın kendisi olduğu yerde kalır:\n{{path}}",
         "missingBadge": "Dosya yok",
@@ -853,15 +853,15 @@
       },
       "autostart": {
         "label": "Başlangıçta çalıştır",
-        "description": "Oturum açtığınızda SpeakoFlow'u otomatik olarak açar."
+        "description": "Oturum açtığınızda Awaz'u otomatik olarak açar."
       },
       "showTrayIcon": {
         "label": "Tepsi simgesini göster",
-        "description": "SpeakoFlow'u sistem tepsisinde tutar."
+        "description": "Awaz'u sistem tepsisinde tutar."
       },
       "closeBehavior": {
         "label": "Pencereyi kapattığımda uygulamadan çık",
-        "description": "Kapalıyken pencereyi kapatmak SpeakoFlow'u tepside çalışır durumda tutar, böylece kısayollarınız çalışmaya devam eder. Açıkken pencereyi kapatmak uygulamayı tamamen kapatır."
+        "description": "Kapalıyken pencereyi kapatmak Awaz'u tepside çalışır durumda tutar, böylece kısayollarınız çalışmaya devam eder. Açıkken pencereyi kapatmak uygulamayı tamamen kapatır."
       },
       "overlayStyle": {
         "title": "Kaplama",
@@ -955,8 +955,8 @@
       },
       "customWords": {
         "title": "Özel kelimeler",
-        "description": "SpeakoFlow'un sizin istediğiniz gibi yazması gereken adlar, ürünler ve ifadeler.",
-        "info": "Örnek: SpeakoFlow “Coco row” yazıyorsa “Kokoro” ekleyin.",
+        "description": "Awaz'un sizin istediğiniz gibi yazması gereken adlar, ürünler ve ifadeler.",
+        "info": "Örnek: Awaz “Coco row” yazıyorsa “Kokoro” ekleyin.",
         "placeholder": "Bir ad, terim veya kısa ifade ekleyin",
         "add": "Ekle",
         "empty": "Henüz özel kelime yok.",
@@ -965,7 +965,7 @@
       },
       "autoLearn": {
         "label": "Düzelttiğim kelimeleri öğren",
-        "description": "SpeakoFlow'un yanlış yazdığı bir kelimeyi düzelttiğinizde yazılışınızı hatırlar.",
+        "description": "Awaz'un yanlış yazdığı bir kelimeyi düzelttiğinizde yazılışınızı hatırlar.",
         "info": "Yalnızca az önce yazdığı alanı, yaklaşık bir dakika boyunca okur. Hiçbir şey yüklenmez ve öğrendiği her kelime burada listelenir.",
         "unsupported": "Düzeltmelerden öğrenme şimdilik yalnızca Windows'ta kullanılabilir. Yine de yukarıdan kelimeleri elle ekleyebilirsiniz.",
         "learnedTitle": "Düzeltmelerinizden öğrenilenler",
@@ -979,7 +979,7 @@
         "title": "Metin değiştirmeleri",
         "description": "Transkriptinizdeki bir ifadeyi, sık kullandığınız bir metinle değiştirin. Örnek: “e-postam” ifadesi “alex@example.com” olur.",
         "rulesTitle": "Değiştirme kuralları",
-        "rulesHint": "SpeakoFlow'un ne duyacağını ve ne ekleyeceğini seçin.",
+        "rulesHint": "Awaz'un ne duyacağını ve ne ekleyeceğini seçin.",
         "empty": "Sık söylediğiniz bir ifade için kural oluşturun.",
         "addFirst": "İlk kuralı oluştur",
         "addRule": "Değiştirme ekle",
@@ -1227,7 +1227,7 @@
         },
         "model": {
           "emptyTitle": "Henüz temizleme modeli yok",
-          "emptyDescription": "SpeakoFlow Mini, tam bu iş için hazırlanmış küçük bir indirmedir.",
+          "emptyDescription": "Awaz Mini, tam bu iş için hazırlanmış küçük bir indirmedir.",
           "choose": "Bir model seç",
           "tunedBadge": "Temizleme için ayarlanmış"
         },
@@ -1235,7 +1235,7 @@
           "title": "Temizleme modelinizi seçin",
           "description": "Temizleme her diktenin ardından çalışır; bu yüzden hız boyuttan önemlidir. Her şey çevrimdışı çalışır.",
           "recommendedTitle": "Temizleme için önerilir",
-          "recommendedDescription": "SpeakoFlow Mini yalnızca bu iş için eğitildi ve bu işte çok daha büyük modelleri geride bırakıyor."
+          "recommendedDescription": "Awaz Mini yalnızca bu iş için eğitildi ve bu işte çok daha büyük modelleri geride bırakıyor."
         },
         "promptGroupTitle": "Temizleme talimatları",
         "tunedModelNotice": "Bu model İngilizce dikte temizliği için ince ayarlandı; bu yüzden en iyi sonucu önerilen prompt ile ve stil olmadan verir.",
@@ -1339,7 +1339,7 @@
       },
       "updateChecks": {
         "label": "Güncellemeleri otomatik kontrol et",
-        "description": "SpeakoFlow açıldığında ve her 12 saatte bir yeni sürüm arar. İstediğiniz zaman elle de kontrol edebilirsiniz."
+        "description": "Awaz açıldığında ve her 12 saatte bir yeni sürüm arar. İstediğiniz zaman elle de kontrol edebilirsiniz."
       },
       "soundTheme": {
         "label": "Ses teması",
@@ -1433,7 +1433,7 @@
       },
       "appDataDirectory": {
         "title": "Uygulama veri klasörü",
-        "description": "SpeakoFlow'un modellerinizi, geçmişinizi ve ayarlarınızı sakladığı yer."
+        "description": "Awaz'un modellerinizi, geçmişinizi ve ayarlarınızı sakladığı yer."
       },
       "sourceCode": {
         "title": "Kaynak kodu",
@@ -1442,12 +1442,12 @@
       },
       "license": {
         "title": "Lisans",
-        "description": "SpeakoFlow, MIT Lisansı altında açık kaynaktır ve CJ Pais'in Handy (o da MIT) projesi üzerine kuruludur.",
+        "description": "Awaz, MIT Lisansı altında açık kaynaktır ve CJ Pais'in Handy (o da MIT) projesi üzerine kuruludur.",
         "button": "Lisansı görüntüle"
       },
       "supportDevelopment": {
         "title": "Geliştirmeyi destekleyin",
-        "description": "SpeakoFlow'u geliştirmeye devam etmemize yardımcı olun",
+        "description": "Awaz'u geliştirmeye devam etmemize yardımcı olun",
         "button": "Bağış Yap"
       }
     },
@@ -1455,7 +1455,7 @@
       "enable": {
         "title": "Asistan",
         "label": "Asistanı etkinleştir",
-        "description": "SpeakoFlow'u yalnızca dikte için kullanmak istiyorsanız bunu kapatın. Yüzen panel kapatılır ve hiç yüklenmez, kısayolları serbest bırakılır ve kullandığı bellek geri verilir. Flow ile oluştur ve yapay zekâ temizleme çalışmayı sürdürür."
+        "description": "Awaz'u yalnızca dikte için kullanmak istiyorsanız bunu kapatın. Yüzen panel kapatılır ve hiç yüklenmez, kısayolları serbest bırakılır ve kullandığı bellek geri verilir. Flow ile oluştur ve yapay zekâ temizleme çalışmayı sürdürür."
       },
       "shortcuts": {
         "title": "Kısayollar"
@@ -1494,7 +1494,7 @@
         "deleteModelFailed": "Model silinemedi.",
         "finderSectionTitle": "Daha fazla cihaz içi model",
         "finderTitle": "Hugging Face'e göz at",
-        "finderDescription": "Binlerce GGUF modeli arasında arama yapın ve birini doğrudan SpeakoFlow'a indirin.",
+        "finderDescription": "Binlerce GGUF modeli arasında arama yapın ve birini doğrudan Awaz'a indirin.",
         "finderAction": "Model bul",
         "huggingFaceTitle": "Modelleriniz",
         "catalogEmpty": "Şu anda önerilen bir yerel model yok."
@@ -1617,7 +1617,7 @@
           "label": "Yakalama zamanı"
         },
         "screenRecording": {
-          "description": "Ekran görüşü, macOS Ekran Kaydı iznine ihtiyaç duyar. İzni Sistem Ayarları'ndan verin, ardından etkili olması için SpeakoFlow'u yeniden başlatın.",
+          "description": "Ekran görüşü, macOS Ekran Kaydı iznine ihtiyaç duyar. İzni Sistem Ayarları'ndan verin, ardından etkili olması için Awaz'u yeniden başlatın.",
           "grant": "Sistem Ayarları'nı aç"
         }
       },
@@ -1794,7 +1794,7 @@
         "testGpuMoved": "Ekran kartınız örneği bozdu, bu yüzden sessize alındı. Kokoro artık işlemciyi kullanıyor; duymak için yeniden test edin.",
         "testGpuForced": "Ekran kartınız örneği bozdu, bu yüzden sessize alındı. Çalıştığı yer ayarını Otomatik veya İşlemci yapın.",
         "testGpuSuspect": "Örnek bozuk çıktı, bu yüzden sessize alındı. Ekran kartınızı kontrol etmek için yeniden test edin.",
-        "testPhrase": "Merhaba! Bu, SpeakoFlow'un ses çıkışı testidir.",
+        "testPhrase": "Merhaba! Bu, Awaz'un ses çıkışı testidir.",
         "downloadStart": "Kokoro sesi indiriliyor…",
         "downloadProgress": "Kokoro sesi indiriliyor… %{{progress}}",
         "downloadReady": "Kokoro sesi hazır ✓",
@@ -1981,7 +1981,7 @@
     "list": {
       "title": "Kaydedilen toplantılar",
       "emptyTitle": "Henüz toplantı yok",
-      "emptyHint": "Bir görüşmeden önce kaydı başlatın; SpeakoFlow transkripti kimin konuştuğuna göre ayrılmış olarak saklar.",
+      "emptyHint": "Bir görüşmeden önce kaydı başlatın; Awaz transkripti kimin konuştuğuna göre ayrılmış olarak saklar.",
       "loadMore": "Daha fazla yükle",
       "speakers_one": "{{count}} konuşmacı",
       "speakers_other": "{{count}} konuşmacı",
@@ -2143,7 +2143,7 @@
   },
   "accessibility": {
     "permissionsRequired": "Erişilebilirlik izinleri gerekli",
-    "permissionsDescription": "SpeakoFlow, transkribe edilen metni yazabilmek için erişilebilirlik izinlerine ihtiyaç duyar.",
+    "permissionsDescription": "Awaz, transkribe edilen metni yazabilmek için erişilebilirlik izinlerine ihtiyaç duyar.",
     "openSettings": "Sistem Ayarlarını Aç",
     "dismiss": "Yoksay"
   },
@@ -2172,7 +2172,7 @@
   },
   "appLanguage": {
     "title": "Uygulama dili",
-    "description": "SpeakoFlow arayüzünün dilini değiştirin"
+    "description": "Awaz arayüzünün dilini değiştirin"
   },
   "overlay": {
     "preparing": "Mikrofon hazırlanıyor…",
@@ -2523,7 +2523,7 @@
       "performance": "Performans"
     },
     "about": {
-      "appName": "SpeakoFlow",
+      "appName": "Awaz",
       "version": "Sürüm {{version}}",
       "project": "Proje",
       "docs": "Belgeler",
@@ -2541,7 +2541,7 @@
     "subtitleTap": "Herhangi bir uygulamada kısayolunuza dokunun, konuşun ve yeniden dokunun. Sözleriniz imlecinizin olduğu yerde görünür.",
     "needsModel": {
       "title": "Dikte etmeye başlamak için bir konuşma modeli seçin.",
-      "description": "SpeakoFlow'un söylediklerinizi yazabilmesi için bir konuşmadan metne modeline ihtiyacı var.",
+      "description": "Awaz'un söylediklerinizi yazabilmesi için bir konuşmadan metne modeline ihtiyacı var.",
       "action": "Bir model seçin"
     },
     "stats": {
@@ -2616,8 +2616,8 @@
         "open": "Klavye ayarları"
       },
       "linux": {
-        "wayland": "Wayland'de masaüstünüz bu tuşları SpeakoFlow'a yalnızca pencerelerinden biri öndeyken iletir. Bunları her uygulamada kullanmak için sistem ayarlarında kısayol olarak ekleyin.",
-        "noAccess": "SpeakoFlow Keys bu bilgisayarda klavyeyi okuyamıyor, bu yüzden bu kısayollar henüz bir şey yapmıyor.",
+        "wayland": "Wayland'de masaüstünüz bu tuşları Awaz'a yalnızca pencerelerinden biri öndeyken iletir. Bunları her uygulamada kullanmak için sistem ayarlarında kısayol olarak ekleyin.",
+        "noAccess": "Awaz Keys bu bilgisayarda klavyeyi okuyamıyor, bu yüzden bu kısayollar henüz bir şey yapmıyor.",
         "setUp": "Kur",
         "where": {
           "gnome": "Ayarlar → Klavye → Kısayolları Görüntüle ve Özelleştir → Özel Kısayollar'ı açın, aşağıdaki her komut için bir tane ekleyin ve istediğiniz tuşlara basın.",
@@ -2625,7 +2625,7 @@
           "other": "Aşağıdaki her komut için masaüstünüzün klavye ayarlarına özel bir kısayol ya da compositor yapılandırmanıza bir bind satırı ekleyin."
         },
         "tapOnly": "Bu şekilde eklenen bir kısayol “Açıp kapatmak için dokun” gibi çalışır: başlatmak için bir kez, durdurmak için tekrar basın.",
-        "access": "Ya da SpeakoFlow Keys'in klavyeyi okumasına izin verin. Bunu bir terminalde çalıştırın, ardından oturumu kapatıp yeniden açın:",
+        "access": "Ya da Awaz Keys'in klavyeyi okumasına izin verin. Bunu bir terminalde çalıştırın, ardından oturumu kapatıp yeniden açın:",
         "copy": "Kopyala",
         "copied": "Kopyalandı"
       }
@@ -2655,7 +2655,7 @@
     }
   },
   "modelsHub": {
-    "description": "SpeakoFlow'daki her işi sizin seçtiğiniz bir model yapar. Gizlilik için bu bilgisayarda, hız için bulutta çalıştırın.",
+    "description": "Awaz'daki her işi sizin seçtiğiniz bir model yapar. Gizlilik için bu bilgisayarda, hız için bulutta çalıştırın.",
     "addLocal": "Model dosyası ekle",
     "privacyNote": "Bu bilgisayardaki modeller sesinizi veya metninizi hiçbir yere göndermez. Bulut modelleri, API anahtarınızı kullanarak bunları seçtiğiniz sağlayıcıya gönderir.",
     "inUse": "Kullanımda",
@@ -2805,12 +2805,12 @@
     "shortcutRow": "Kısayol"
   },
   "dictionary": {
-    "description": "SpeakoFlow'a kullandığınız adları ve terimleri öğretin, daha uzun metne dönüşen kısaltmalar tanımlayın.",
+    "description": "Awaz'a kullandığınız adları ve terimleri öğretin, daha uzun metne dönüşen kısaltmalar tanımlayın.",
     "words": {
       "title": "Kelimeleriniz",
-      "description": "SpeakoFlow'un her zaman doğru yazması gereken adlar, jargon ve yazımlar.",
+      "description": "Awaz'un her zaman doğru yazması gereken adlar, jargon ve yazımlar.",
       "placeholder": "Bir ad, terim veya yazım ekleyin…",
-      "empty": "Burada henüz bir şey yok. SpeakoFlow'un sürekli yanlış yazdığı kelimeleri ekleyin."
+      "empty": "Burada henüz bir şey yok. Awaz'un sürekli yanlış yazdığı kelimeleri ekleyin."
     },
     "replacements": {
       "title": "Değiştirmeler",
@@ -3287,11 +3287,11 @@
     "restored": "Ayarlarınız bozulmuştu ve bir yedekten geri yüklendi.",
     "restoredDescription": "Son değişiklikler eksik olabilir.",
     "unrecoverableTitle": "Ayarlarınız kurtarılamadı",
-    "unrecoverableDescription": "SpeakoFlow varsayılan ayarlarla başlatıldı. Bozuk dosya {{file}} adıyla saklandı.",
+    "unrecoverableDescription": "Awaz varsayılan ayarlarla başlatıldı. Bozuk dosya {{file}} adıyla saklandı.",
     "notSavingTitle": "Ayar değişiklikleri kaydedilmeyecek",
-    "notSavingDescription": "Ayar dosyası okunamadığı için olduğu gibi bırakıldı. Tekrar denemek için SpeakoFlow'u yeniden başlatın.",
+    "notSavingDescription": "Ayar dosyası okunamadığı için olduğu gibi bırakıldı. Tekrar denemek için Awaz'u yeniden başlatın.",
     "saveFailingTitle": "Ayarlar kaydedilmiyor",
-    "saveFailingDescription": "Son değişiklikleriniz henüz kaydedilmedi. SpeakoFlow denemeye devam edecek.",
+    "saveFailingDescription": "Son değişiklikleriniz henüz kaydedilmedi. Awaz denemeye devam edecek.",
     "dismiss": "Kapat"
   }
 }

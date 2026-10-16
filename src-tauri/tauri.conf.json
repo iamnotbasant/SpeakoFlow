@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "SpeakoFlow",
-  "version": "2.0.1",
-  "identifier": "com.abhishekbarali.speakoflow",
+  "productName": "Awaz",
+  "version": "1.0.4",
+  "identifier": "com.basant.awaz",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",

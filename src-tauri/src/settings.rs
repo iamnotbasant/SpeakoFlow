@@ -2550,6 +2550,29 @@ pub fn default_cloud_stt_providers() -> Vec<CloudSttProvider> {
                 "https://learn.microsoft.com/azure/ai-services/speech-service/mai-transcribe"
                     .to_string(),
         },
+        // Gemini's OpenAI-compatible transcription endpoint. Accepts the OpenAI
+        // multipart shape, so it needs no protocol of its own. `prompt` is not
+        // documented on its audio route, so honors_keyterms stays false and the
+        // app keeps its own local custom-word pass.
+        CloudSttProvider {
+            id: "gemini".to_string(),
+            label: "Gemini".to_string(),
+            base_url: "https://generativelanguage.googleapis.com/v1beta/openai".to_string(),
+            allow_base_url_edit: false,
+            kind: CloudSttKind::OpenAiCompatible,
+            default_model: "gemini-2.5-flash".to_string(),
+            models: vec![
+                "gemini-2.5-flash".to_string(),
+                "gemini-2.0-flash".to_string(),
+            ],
+            models_endpoint: Some("/models".to_string()),
+            honors_keyterms: false,
+            supports_streaming: false,
+            // No /audio/translations route on the OpenAI-compatible endpoint.
+            supports_translation: false,
+            key_optional: false,
+            api_key_url: "https://aistudio.google.com/apikey".to_string(),
+        },
         // Custom always comes last, mirroring the post-processing provider list.
         CloudSttProvider {
             id: "custom".to_string(),
@@ -3884,7 +3907,7 @@ pub fn get_default_settings() -> AppSettings {
     // to ask; the same keys plus Shift dictate and clean up, the ask keys plus
     // C start a call, and Esc cancels.
     //
-    // Windows: Left Ctrl + Win, Wispr Flow's default, so a switcher keeps it.
+    // Windows: Left Ctrl + D. Simple, memorable, and out of the way.
     // Modifier-only, so no letter or Space is taken from any app.
     // macOS: Fn (the globe key), Wispr's default too. Option+Space typed a
     // non-breaking space and is Alfred's and ChatGPT's launcher.
@@ -3892,7 +3915,7 @@ pub fn get_default_settings() -> AppSettings {
     // no permissions) cannot register a modifier-only combo, and Ctrl+Space is
     // what Handy ships, so it is also what a Handy user already knows.
     #[cfg(target_os = "windows")]
-    let default_shortcut = "ctrl_left+super";
+    let default_shortcut = "ctrl_left+d";
     #[cfg(target_os = "macos")]
     let default_shortcut = "fn";
     #[cfg(target_os = "linux")]
@@ -3915,7 +3938,7 @@ pub fn get_default_settings() -> AppSettings {
     // The dictation keys plus Shift. Only registered while cleanup is on and
     // set to its own shortcut.
     #[cfg(target_os = "windows")]
-    let default_post_process_shortcut = "ctrl_left+super+shift";
+    let default_post_process_shortcut = "ctrl_left+shift+d";
     #[cfg(target_os = "macos")]
     let default_post_process_shortcut = "fn+shift";
     #[cfg(target_os = "linux")]
