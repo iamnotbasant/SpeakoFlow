@@ -1344,7 +1344,8 @@ impl CloudRequest {
 
     /// Rambler-style Gemini pipeline (proven working): Files API upload →
     /// `POST /v1beta/interactions` with `gemini-3.5-transcribe`
-    /// (SMART mode, hi-IN + en-IN) → delete the uploaded file.
+    /// (SMART mode, hi-Latn + en-IN for Roman-script Hinglish output) → delete
+    /// the uploaded file.
     /// Gemini's OpenAI-compatible endpoint has no `/audio/transcriptions`
     /// (it 404s), so this native route is used instead.
     async fn transcribe_gemini(&self, audio: AudioUpload) -> Result<String, String> {
@@ -1440,14 +1441,18 @@ impl CloudRequest {
             return Err("Audio ready hone me bahut time lag gaya.".to_string());
         }
 
-        // 3. Transcribe via /v1beta/interactions (SMART, hi-IN + en-IN).
+        // 3. Transcribe via /v1beta/interactions (SMART, hi-Latn + en-IN).
+        // `hi-Latn` (not `hi-IN`) makes Hindi come back in Latin/Roman script
+        // (Hinglish, e.g. "namaste bhai") instead of Devanagari — verified
+        // live 2026-10-17. A text instruction in the input was ignored by the
+        // model; the BCP 47 script subtag is what actually controls it.
         let interactions_body = |mode: &str| {
             serde_json::json!({
                 "model": self.model,
                 "input": [{ "type": "audio", "uri": file_uri, "mime_type": mime }],
                 "generation_config": {
                     "transcription_config": {
-                        "language_codes": ["hi-IN", "en-IN"],
+                        "language_codes": ["hi-Latn", "en-IN"],
                         "mode": { "type": mode },
                     }
                 },

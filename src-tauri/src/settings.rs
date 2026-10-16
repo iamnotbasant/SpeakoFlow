@@ -2546,7 +2546,7 @@ pub fn default_cloud_stt_providers() -> Vec<CloudSttProvider> {
         },
         // Gemini transcription, Rambler-style: the audio is uploaded through
         // the Files API and transcribed via POST /v1beta/interactions with
-        // `gemini-3.5-transcribe` (SMART, hi-IN + en-IN), then the upload is
+        // `gemini-3.5-transcribe` (SMART, hi-Latn + en-IN for Roman Hinglish), then the upload is
         // deleted. Gemini's OpenAI-compatible endpoint has no
         // /audio/transcriptions (404s), so CloudSttKind::Gemini speaks this
         // native protocol instead of the OpenAI multipart shape.
