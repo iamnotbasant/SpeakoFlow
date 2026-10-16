@@ -1331,71 +1331,191 @@ impl CloudRequest {
         Ok(parsed.text)
     }
 
+    /// Rambler-style Gemini pipeline (proven working): Files API upload →
+    /// `POST /v1beta/interactions` with `gemini-3.5-transcribe`
+    /// (SMART mode, hi-IN + en-IN) → delete the uploaded file.
     /// Gemini's OpenAI-compatible endpoint has no `/audio/transcriptions`
-    /// (it 404s) — audio rides inside a chat message as `input_audio`
-    /// (see ai.google.dev/gemini-api/docs/openai, "Audio understanding").
+    /// (it 404s), so this native route is used instead.
     async fn transcribe_gemini(&self, audio: AudioUpload) -> Result<String, String> {
-        use base64::Engine as _;
-        let url = format!("{}/chat/completions", self.base_url);
-        let audio_format = match audio.format {
-            UploadFormat::Wav => "wav",
-            UploadFormat::Mp3 => "mp3",
-        };
-        let mut prompt = String::from(
-            "Transcribe this audio verbatim. Output only the transcription text, \
-             no preamble, no explanation.",
-        );
-        if let Some(language) = &self.language {
-            prompt.push_str(&format!(" The spoken language is {language}."));
+        const API_BASE: &str = "https://generativelanguage.googleapis.com/v1beta";
+        const UPLOAD_URL: &str = "https://generativelanguage.googleapis.com/upload/v1beta/files";
+        let key = self.api_key.clone();
+        if key.is_empty() {
+            return Err("Gemini API key missing".to_string());
         }
-        if !self.keyterms.is_empty() {
-            prompt.push_str(&format!(
-                " Words that may appear: {}.",
-                self.keyterms.join(", ")
+        let mime: &'static str = match audio.format {
+            UploadFormat::Wav => "audio/wav",
+            UploadFormat::Mp3 => "audio/mp3",
+        };
+        let since_epoch = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map(|d| d.as_secs())
+            .unwrap_or(0);
+
+        // 1. Upload via the Files API (multipart: metadata + file).
+        let metadata = serde_json::json!({
+            "file": { "display_name": format!("awaz-{since_epoch}.wav") }
+        });
+        let file_part = reqwest::multipart::Part::bytes(audio.bytes)
+            .file_name("audio.wav")
+            .mime_str(mime)
+            .map_err(|e| format!("Failed to attach audio: {e}"))?;
+        let meta_part = reqwest::multipart::Part::text(metadata.to_string())
+            .mime_str("application/json")
+            .map_err(|e| format!("Failed to build upload metadata: {e}"))?;
+        let form = reqwest::multipart::Form::new()
+            .part("metadata", meta_part)
+            .part("file", file_part);
+        let upload_resp = self
+            .client()?
+            .post(UPLOAD_URL)
+            .timeout(self.timeout)
+            .multipart(form)
+            .header("x-goog-api-key", &key)
+            .send()
+            .await
+            .map_err(|e| self.network_error(e))?;
+        if !upload_resp.status().is_success() {
+            let status = upload_resp.status();
+            let body = upload_resp.text().await.unwrap_or_default();
+            return Err(format!(
+                "Upload failed ({status}): {}",
+                body.chars().take(300).collect::<String>()
             ));
         }
-        let body = serde_json::json!({
-            "model": self.model,
-            "messages": [{
-                "role": "user",
-                "content": [
-                    { "type": "text", "text": prompt },
-                    { "type": "input_audio", "input_audio": {
-                        "data": base64::engine::general_purpose::STANDARD.encode(&audio.bytes),
-                        "format": audio_format,
-                    } },
-                ],
-            }],
-        });
-        let mut request = self.post(&url)?.json(&body);
-        if !self.api_key.is_empty() {
-            request = request.bearer_auth(&self.api_key);
+        #[derive(Deserialize)]
+        struct UploadedFile {
+            name: String,
+            uri: String,
         }
-        let response = request.send().await.map_err(|e| self.network_error(e))?;
+        #[derive(Deserialize)]
+        struct UploadResponse {
+            file: UploadedFile,
+        }
+        let uploaded: UploadResponse = self.parse_json(upload_resp).await?;
+        let (file_name, file_uri) = (uploaded.file.name, uploaded.file.uri);
 
+        // 2. Wait until the file is ACTIVE.
         #[derive(Deserialize)]
-        struct ChatMessage {
+        struct FileState {
             #[serde(default)]
-            content: Option<String>,
+            state: Option<String>,
+        }
+        let mut active = false;
+        for _ in 0..60 {
+            let state_resp = self
+                .client()?
+                .get(format!("{API_BASE}/{file_name}"))
+                .timeout(Duration::from_secs(30))
+                .header("x-goog-api-key", &key)
+                .send()
+                .await
+                .map_err(|e| self.network_error(e))?;
+            let st: FileState = self.parse_json(state_resp).await?;
+            match st.state.as_deref() {
+                Some("ACTIVE") => {
+                    active = true;
+                    break;
+                }
+                Some("FAILED") => {
+                    let _ = self.delete_gemini_file(API_BASE, &key, &file_name).await;
+                    return Err("Audio process nahi ho paya (FAILED).".to_string());
+                }
+                _ => std::thread::sleep(Duration::from_secs(2)),
+            }
+        }
+        if !active {
+            let _ = self.delete_gemini_file(API_BASE, &key, &file_name).await;
+            return Err("Audio ready hone me bahut time lag gaya.".to_string());
+        }
+
+        // 3. Transcribe via /v1beta/interactions (SMART, hi-IN + en-IN).
+        let interactions_body = |mode: &str| {
+            serde_json::json!({
+                "model": self.model,
+                "input": [{ "type": "audio", "uri": file_uri, "mime_type": mime }],
+                "generation_config": {
+                    "transcription_config": {
+                        "language_codes": ["hi-IN", "en-IN"],
+                        "mode": { "type": mode },
+                    }
+                },
+            })
+        };
+        let mut resp = self
+            .client()?
+            .post(format!("{API_BASE}/interactions"))
+            .timeout(self.timeout)
+            .header("x-goog-api-key", &key)
+            .json(&interactions_body("smart"))
+            .send()
+            .await
+            .map_err(|e| self.network_error(e))?;
+        if resp.status() == reqwest::StatusCode::BAD_REQUEST {
+            // Some deployments want the mode uppercased ("SMART").
+            resp = self
+                .client()?
+                .post(format!("{API_BASE}/interactions"))
+                .timeout(self.timeout)
+                .header("x-goog-api-key", &key)
+                .json(&interactions_body("SMART"))
+                .send()
+                .await
+                .map_err(|e| self.network_error(e))?;
+        }
+        if !resp.status().is_success() {
+            let status = resp.status();
+            let body = resp.text().await.unwrap_or_default();
+            let _ = self.delete_gemini_file(API_BASE, &key, &file_name).await;
+            return Err(format!(
+                "Transcribe failed ({status}): {}",
+                body.chars().take(400).collect::<String>()
+            ));
         }
         #[derive(Deserialize)]
-        struct ChatChoice {
+        struct StepContent {
+            #[serde(default, rename = "type")]
+            kind: Option<String>,
             #[serde(default)]
-            message: Option<ChatMessage>,
+            text: Option<String>,
         }
         #[derive(Deserialize)]
-        struct ChatCompletionsResponse {
+        struct Step {
             #[serde(default)]
-            choices: Vec<ChatChoice>,
+            content: Vec<StepContent>,
         }
-        let parsed: ChatCompletionsResponse = self.parse_json(response).await?;
-        Ok(parsed
-            .choices
-            .into_iter()
-            .next()
-            .and_then(|c| c.message)
-            .and_then(|m| m.content)
-            .unwrap_or_default())
+        #[derive(Deserialize)]
+        struct InteractionsResponse {
+            #[serde(default)]
+            steps: Vec<Step>,
+        }
+        let parsed: InteractionsResponse = self.parse_json(resp).await?;
+        let text = parsed
+            .steps
+            .iter()
+            .flat_map(|s| s.content.iter())
+            .filter(|c| c.kind.as_deref() == Some("text"))
+            .filter_map(|c| c.text.clone())
+            .collect::<Vec<_>>()
+            .join("\n")
+            .trim()
+            .to_string();
+
+        // 4. Delete the uploaded file (best-effort, like Rambler).
+        let _ = self.delete_gemini_file(API_BASE, &key, &file_name).await;
+        Ok(text)
+    }
+
+    /// Best-effort delete of a Files API upload; failures are ignored.
+    async fn delete_gemini_file(&self, api_base: &str, key: &str, file_name: &str) {
+        if let Ok(client) = self.client() {
+            let _ = client
+                .delete(format!("{api_base}/{file_name}"))
+                .timeout(Duration::from_secs(30))
+                .header("x-goog-api-key", key)
+                .send()
+                .await;
+        }
     }
 
     /// `POST /v1/listen` — raw audio body, `Authorization: Token`, options as
